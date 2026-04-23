@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { navigation, type NavItem } from "@/content/navigation";
@@ -108,34 +109,66 @@ function MobileNav({
     };
   }, [isOpen]);
 
-  if (!isOpen) return null;
+  // Close on Escape key
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    if (isOpen) {
+      window.addEventListener("keydown", handleEsc);
+    }
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, [isOpen, onClose]);
 
   return (
-    <div className="fixed inset-0 z-50 lg:hidden">
+    <>
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+        className={`fixed inset-0 z-50 bg-black/50 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
+          isOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
         onClick={onClose}
+        aria-hidden="true"
       />
 
       {/* Drawer */}
-      <div className="absolute right-0 top-0 bottom-0 w-80 max-w-[85vw] bg-white shadow-2xl overflow-y-auto">
-        {/* Close button */}
-        <div className="flex items-center justify-between p-5 border-b border-gray-100">
-          <span className="font-serif text-lg font-bold text-primary">
-            ICAIES³
-          </span>
+      <div
+        className={`fixed right-0 top-0 bottom-0 z-50 w-80 max-w-[85vw] bg-white shadow-2xl overflow-y-auto transition-transform duration-300 ease-out lg:hidden ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Navigation menu"
+      >
+        {/* Drawer Header */}
+        <div className="flex items-center justify-between p-5 border-b border-gray-100 bg-bg-cream/50">
+          <div className="flex items-center gap-3">
+            <div className="relative w-8 h-8">
+              <Image
+                src="/logos/amity-logo.png"
+                alt="Amity"
+                fill
+                className="object-contain"
+                sizes="32px"
+              />
+            </div>
+            <span className="font-serif text-lg font-bold text-primary">
+              ICAIES³
+            </span>
+          </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="p-2.5 rounded-xl bg-gray-100 hover:bg-gray-200 transition-colors"
             aria-label="Close menu"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5 text-primary" />
           </button>
         </div>
 
         {/* Nav Items */}
-        <nav className="p-4">
+        <nav className="p-4" aria-label="Mobile navigation">
           {navigation.map((item) => {
             if (item.children) {
               const isExpanded = expandedItems.includes(item.label);
@@ -161,7 +194,11 @@ function MobileNav({
                     />
                   </button>
 
-                  {isExpanded && (
+                  <div
+                    className={`overflow-hidden transition-all duration-200 ease-out ${
+                      isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                    }`}
+                  >
                     <div className="ml-4 mt-1 border-l-2 border-accent/20 pl-4">
                       {item.children.map((child) => (
                         <Link
@@ -187,7 +224,7 @@ function MobileNav({
                         </Link>
                       ))}
                     </div>
-                  )}
+                  </div>
                 </div>
               );
             }
@@ -208,14 +245,29 @@ function MobileNav({
             );
           })}
         </nav>
+
+        {/* Drawer Footer CTA */}
+        <div className="p-4 border-t border-gray-100 mt-auto">
+          <Link
+            href="https://cmt3.research.microsoft.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={onClose}
+            className="btn-gradient w-full text-center text-sm justify-center"
+          >
+            Submit Paper ↗
+          </Link>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
 export function Navigation() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const closeMobile = useCallback(() => setMobileOpen(false), []);
 
   const isItemActive = (item: NavItem): boolean => {
     if (item.href && pathname === item.href) return true;
@@ -226,12 +278,13 @@ export function Navigation() {
   };
 
   return (
-    <nav
-      className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm"
-      id="main-navigation"
-      aria-label="Main navigation"
-    >
-      <div className="mx-auto max-w-[1280px] px-6 lg:px-12">
+    <>
+      <nav
+        className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm"
+        id="main-navigation"
+        aria-label="Main navigation"
+      >
+        <div className="mx-auto max-w-[1280px] px-6 lg:px-12">
         <div className="flex items-center justify-center h-14">
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-1">
@@ -264,23 +317,55 @@ export function Navigation() {
             })}
           </div>
 
-          {/* Mobile Hamburger */}
+          {/* Mobile Header */}
           <div className="lg:hidden flex items-center justify-between w-full">
-            <span className="font-serif text-lg font-bold text-primary">
-              ICAIES³ 2026
-            </span>
+            <div className="flex items-center gap-2.5">
+              <div className="relative w-7 h-7">
+                <Image
+                  src="/logos/amity-logo.png"
+                  alt="Amity"
+                  fill
+                  className="object-contain"
+                  sizes="28px"
+                />
+              </div>
+              <span className="font-serif text-lg font-bold text-primary">
+                ICAIES³
+              </span>
+            </div>
+
+            {/* Hamburger Button — Premium animated style */}
             <button
-              onClick={() => setMobileOpen(true)}
-              className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
-              aria-label="Open menu"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="relative w-11 h-11 flex items-center justify-center rounded-xl bg-primary text-white shadow-md hover:shadow-lg active:scale-95 transition-all duration-200"
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileOpen}
             >
-              <Menu className="w-5 h-5 text-primary" />
+              <div className="relative w-5 h-4 flex flex-col justify-between">
+                <span
+                  className={`block h-[2px] w-full bg-white rounded-full transition-all duration-300 origin-center ${
+                    mobileOpen ? "rotate-45 translate-y-[7px]" : ""
+                  }`}
+                />
+                <span
+                  className={`block h-[2px] w-full bg-white rounded-full transition-all duration-200 ${
+                    mobileOpen ? "opacity-0 scale-x-0" : ""
+                  }`}
+                />
+                <span
+                  className={`block h-[2px] w-full bg-white rounded-full transition-all duration-300 origin-center ${
+                    mobileOpen ? "-rotate-45 -translate-y-[7px]" : ""
+                  }`}
+                />
+              </div>
             </button>
           </div>
         </div>
       </div>
 
-      <MobileNav isOpen={mobileOpen} onClose={() => setMobileOpen(false)} />
-    </nav>
+      </nav>
+
+      <MobileNav isOpen={mobileOpen} onClose={closeMobile} />
+    </>
   );
 }

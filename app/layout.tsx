@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Navigation } from "@/components/layout/Navigation";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { siteMeta } from "@/content/site-meta";
+import { BackToTop } from "@/components/ui/BackToTop";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -52,6 +53,7 @@ export default function RootLayout({
         <Navigation />
         <main id="main-content">{children}</main>
         <SiteFooter />
+        <BackToTop />
       </body>
     </html>
   );
