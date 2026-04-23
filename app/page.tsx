@@ -1,65 +1,82 @@
-import Image from "next/image";
+import { homeContent } from "@/content/home";
+import { ImportantDeadlines } from "@/components/home/ImportantDeadlines";
+import { Announcements } from "@/components/home/Announcements";
+import { CountdownTimer } from "@/components/home/CountdownTimer";
+import { AboutInstitution } from "@/components/home/AboutInstitution";
+import { Timer } from "lucide-react";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="bg-white">
+      <div className="mx-auto max-w-[1280px] px-6 lg:px-12 py-10 lg:py-14">
+        {/* 2-Column Layout: Main (left) + Sidebar (right) */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-10 lg:gap-14">
+          {/* Left Column — Main Content */}
+          <div>
+            {/* CMT Acknowledgement */}
+            <section id="cmt-acknowledgement">
+              <h2 className="text-2xl lg:text-3xl mb-4">
+                <span className="page-title-light">CMT </span>
+                <span className="page-title-accent">Acknowledgement</span>
+              </h2>
+              <div className="bg-bg-cream border border-gray-100 rounded-xl p-5">
+                <p className="text-sm text-text-body leading-relaxed">
+                  {homeContent.cmtAcknowledgement.body}
+                </p>
+              </div>
+            </section>
+
+            {/* Welcome Section */}
+            <section id="welcome-section" className="mt-10">
+              <h2 className="text-2xl lg:text-3xl mb-4">
+                <span className="page-title-light">Welcome to </span>
+                <span className="page-title-accent">ICAIES³</span>
+              </h2>
+              {homeContent.welcome.body.map((paragraph, index) => (
+                <p
+                  key={index}
+                  className="text-text-body leading-relaxed mb-3 last:mb-0"
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </section>
+
+            {/* Conference Goal */}
+            <section id="conference-goal" className="mt-10">
+              <div className="bg-gradient-to-br from-primary to-primary-light rounded-xl p-6 text-white">
+                <h3 className="font-serif text-xl font-bold mb-3 text-accent-light">
+                  {homeContent.conferenceGoal.title}
+                </h3>
+                <p className="text-sm text-white/90 leading-relaxed">
+                  {homeContent.conferenceGoal.body}
+                </p>
+              </div>
+            </section>
+
+            {/* About Institution */}
+            <AboutInstitution />
+          </div>
+
+          {/* Right Column — Sidebar */}
+          <aside className="space-y-6 lg:sticky lg:top-20 lg:self-start">
+            {/* Important Deadlines */}
+            <ImportantDeadlines />
+
+            {/* Announcements */}
+            <Announcements />
+
+            {/* Countdown Timer */}
+            <div>
+              <div className="widget-header flex items-center gap-2">
+                <Timer className="w-4 h-4" />
+                <span>Time Left for Conference</span>
+              </div>
+              <CountdownTimer />
+            </div>
+          </aside>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </div>
     </div>
   );
 }
