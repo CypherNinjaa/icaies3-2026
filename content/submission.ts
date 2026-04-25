@@ -21,8 +21,8 @@ export const submissionContent = {
 		{
 			title: "Templates & Formatting",
 			content: [
-				"Papers must be formatted according to the provided templates (IEEE/Springer format).",
-				"Full papers should be 6-8 pages in length, including references and appendices.",
+				"Papers must be formatted according to the conference submission template provided on the website.",
+				"The maximum length of the paper is six (6) pages, including references and appendices.",
 				"All papers must be submitted in PDF format.",
 			],
 		},

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { PageTitle } from "@/components/layout/PageTitle";
 import { organizingCommittee, roleLabels, roleOrder } from "@/content/committee";
-import { User, Crown, Award, Users } from "lucide-react";
+import { User, Crown, Award, Users, BookOpen, Star, Bookmark } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Organizing Committee",
@@ -10,8 +10,10 @@ export const metadata: Metadata = {
 
 const roleIcons: Record<string, React.ReactNode> = {
   "chief-patron": <Crown className="w-5 h-5 text-accent" />,
+  mentor: <Star className="w-5 h-5 text-accent" />,
   patron: <Crown className="w-5 h-5 text-accent" />,
-  director: <Award className="w-5 h-5 text-accent" />,
+  advisory: <BookOpen className="w-5 h-5 text-accent" />,
+  "conference-chair": <Bookmark className="w-5 h-5 text-accent" />,
   convenor: <Award className="w-5 h-5 text-accent" />,
   "co-convenor": <Award className="w-5 h-5 text-accent" />,
   member: <User className="w-5 h-5 text-accent" />,
@@ -36,9 +38,9 @@ export default function OrganizingCommitteePage() {
                 <h3 className="text-lg font-bold text-primary">{label}</h3>
                 <div className="flex-1 h-px bg-gray-200 ml-3" />
               </div>
-              <div className={`grid gap-4 ${role === "member" ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" : role === "convenor" ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-1 max-w-lg"}`}>
+              <div className={`grid gap-4 ${role === "member" ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" : role === "convenor" || role === "co-convenor" || role === "advisory" ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-1 max-w-lg"}`}>
                 {members.map((member) => (
-                  <div key={member.name} className={`bg-white border border-gray-100 rounded-xl p-5 shadow-sm card-hover ${role === "chief-patron" || role === "patron" ? "border-l-4 border-l-accent" : ""}`}>
+                  <div key={member.name + member.role} className={`bg-white border border-gray-100 rounded-xl p-5 shadow-sm card-hover ${role === "chief-patron" || role === "patron" || role === "conference-chair" ? "border-l-4 border-l-accent" : ""}`}>
                     <div className="flex items-start gap-3">
                       <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary flex-shrink-0">
                         <Users className="w-4 h-4" />
