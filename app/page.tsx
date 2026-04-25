@@ -8,24 +8,11 @@ import { Timer } from "lucide-react";
 export default function HomePage() {
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-[1280px] px-6 lg:px-12 py-10 lg:py-14">
+      <div className="mx-auto max-w-7xl px-6 lg:px-12 py-10 lg:py-14">
         {/* 2-Column Layout: Main (left) + Sidebar (right) */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-10 lg:gap-14">
           {/* Left Column — Main Content */}
           <div>
-            {/* CMT Acknowledgement */}
-            <section id="cmt-acknowledgement">
-              <h2 className="text-2xl lg:text-3xl mb-4">
-                <span className="page-title-light">CMT </span>
-                <span className="page-title-accent">Acknowledgement</span>
-              </h2>
-              <div className="bg-bg-cream border border-gray-100 rounded-xl p-5">
-                <p className="text-sm text-text-body leading-relaxed">
-                  {homeContent.cmtAcknowledgement.body}
-                </p>
-              </div>
-            </section>
-
             {/* Welcome Section */}
             <section id="welcome-section" className="mt-10">
               <h2 className="text-2xl lg:text-3xl mb-4">
@@ -41,19 +28,6 @@ export default function HomePage() {
                 </p>
               ))}
             </section>
-
-            {/* Conference Goal */}
-            <section id="conference-goal" className="mt-10">
-              <div className="bg-gradient-to-br from-primary to-primary-light rounded-xl p-6 text-white">
-                <h3 className="font-serif text-xl font-bold mb-3 text-accent-light">
-                  {homeContent.conferenceGoal.title}
-                </h3>
-                <p className="text-sm text-white/90 leading-relaxed">
-                  {homeContent.conferenceGoal.body}
-                </p>
-              </div>
-            </section>
-
             {/* About Institution */}
             <AboutInstitution />
           </div>
