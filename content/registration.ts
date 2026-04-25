@@ -1,56 +1,51 @@
-export interface FeeCategory {
-  category: string;
-  indianFee: string;
-  foreignFee: string;
+export interface RegistrationFeeSchedule {
+	phase: string;
+	timeline: string;
+	students: string;
+	researchScholar: string;
+	faculties: string;
+	industryParticipants: string;
 }
 
-export const registrationFees: FeeCategory[] = [
-  {
-    category: "Students / Research Scholars",
-    indianFee: "₹2,500",
-    foreignFee: "$100",
-  },
-  {
-    category: "Academicians",
-    indianFee: "₹3,500",
-    foreignFee: "$150",
-  },
-  {
-    category: "Industry Professionals",
-    indianFee: "₹5,000",
-    foreignFee: "$200",
-  },
-  {
-    category: "Attendees (No Paper)",
-    indianFee: "₹1,500",
-    foreignFee: "$75",
-  },
+export const registrationFeeSchedules: RegistrationFeeSchedule[] = [
+	{
+		phase: "Registration Fee (Early Bird)",
+		timeline: "Till 25th Sept. 2026",
+		students: "To be announced",
+		researchScholar: "To be announced",
+		faculties: "To be announced",
+		industryParticipants: "To be announced",
+	},
+	{
+		phase: "Registration Fee (After Early Bird)",
+		timeline: "After 25th Sept. 2026",
+		students: "To be announced",
+		researchScholar: "To be announced",
+		faculties: "To be announced",
+		industryParticipants: "To be announced",
+	},
 ];
 
 export const registrationContent = {
-  title: "Registration",
-  overview:
-    "All accepted papers must have at least one registered author to be included in the conference proceedings. Registration fees include access to all conference sessions, proceedings, and conference materials.",
-  paymentInstructions: {
-    title: "Payment Instructions",
-    methods: [
-      "Payments via Demand Draft / NEFT in favor of \"Amity University, Patna\"",
-      "Early bird registration available until September 30, 2026",
-      "Registration confirmation will be sent via email within 48 hours of payment verification",
-    ],
-  },
-  posterPresentation: {
-    title: "Poster Presentation",
-    description: "Showcase your research visually at ICAIES³ 2026",
-    details: [
-      "Abstracts will be published in the Conference Abstract Book",
-      "Maximum 2 candidates per poster presentation",
-    ],
-    specs: [
-      { label: "Size", value: '36" × 48" Portrait orientation' },
-      { label: "Title Font", value: "72pt or larger" },
-      { label: "Finish", value: "Matte or Satin finish recommended" },
-      { label: "Graphics", value: "High-resolution (300 DPI minimum)" },
-    ],
-  },
+	title: "Registration",
+	overview:
+		"All accepted paper(s) need to be registered by at least one of the author(s) to present at the conference. Papers without registration will not appear in the publication.",
+	registrationNotes: {
+		title: "Registration Notes",
+		points: [
+			'Registration may be confirmed upon receipt of the duly signed registration form along with fee payment in favor of "Amity University, Patna," payable at Patna.',
+			"The fee can also be transferred through NEFT/RTGS. Account details will be provided on request.",
+			"Only full-time Research Scholars can register under the Research Scholar category.",
+			"Authors must submit valid proof of UG/PG/Research Scholar status to confirm the registration category.",
+		],
+	},
+	paymentInstructions: {
+		title: "Payment Instructions",
+		methods: [
+			'Demand Draft in favor of "Amity University, Patna," payable at Patna',
+			"NEFT/RTGS transfer is accepted (account details on request)",
+			"Early bird registration deadline: September 25, 2026",
+			"Registration deadline and camera-ready submission: October 5, 2026",
+		],
+	},
 };
