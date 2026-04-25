@@ -8,13 +8,13 @@ import { Timer } from "lucide-react";
 export default function HomePage() {
 	return (
 		<div className="bg-white">
-			<div className="mx-auto max-w-7xl px-6 lg:px-12 py-10 lg:py-14">
+			<div className="mx-auto max-w-7xl px-6 lg:px-12 pb-10 lg:pb-14 pt-4 lg:pt-6">
 				{/* 2-Column Layout: Main (left) + Sidebar (right) */}
 				<div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-10 lg:gap-14">
 					{/* Left Column — Main Content */}
 					<div>
 						{/* Welcome Section */}
-						<section id="welcome-section" className="mt-10">
+						<section id="welcome-section">
 							<h2 className="text-2xl lg:text-3xl mb-4">
 								<span className="page-title-light">Welcome to </span>
 								<span className="page-title-accent">ICAIES³</span>

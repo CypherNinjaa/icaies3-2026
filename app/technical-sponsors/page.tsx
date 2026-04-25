@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 export default function TechnicalSponsorsPage() {
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-[1280px] px-6 lg:px-12 py-10 lg:py-14">
+      <div className="mx-auto max-w-[1280px] px-6 lg:px-12 pb-10 lg:pb-14 pt-4 lg:pt-6">
         <PageTitle lightText="Technical" accentText="Sponsors" description={sponsorsContent.description} />
-        <div className="max-w-2xl mx-auto mt-12 text-center">
+        <div className="max-w-2xl mx-auto mt-8 text-center">
           <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-accent/10 mb-6">
             <Handshake className="w-12 h-12 text-accent" />
           </div>

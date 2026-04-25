@@ -18,7 +18,7 @@ const MAPS_LINK_URL = "https://maps.app.goo.gl/X81ZRHEV5GdTZ4Rw9";
 export default function ContactPage() {
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-[1280px] px-6 lg:px-12 py-10 lg:py-14">
+      <div className="mx-auto max-w-[1280px] px-6 lg:px-12 pb-10 lg:pb-14 pt-4 lg:pt-6">
         <PageTitle
           lightText=""
           accentText="Contact"

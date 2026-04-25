@@ -40,14 +40,14 @@ const publicationsWithAPC = [
 export default function PublicationPartnerPage() {
 	return (
 		<div className="bg-white">
-			<div className="mx-auto max-w-7xl px-6 lg:px-12 py-10 lg:py-14">
+			<div className="mx-auto max-w-7xl px-6 lg:px-12 pb-10 lg:pb-14 pt-4 lg:pt-6">
 				<PageTitle
 					lightText="Publication"
 					accentText="Partners"
 					description="Explore the publication avenues available for accepted and presented papers at ICAIES³ 2026."
 				/>
 
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-12">
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8">
 					{/* Without APC */}
 					<div className="bg-bg-cream rounded-xl p-8 border border-gray-100 h-full">
 						<div className="flex items-center gap-3 mb-6">

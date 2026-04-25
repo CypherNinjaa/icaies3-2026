@@ -26,7 +26,7 @@ export default function OrganizingCommitteePage() {
 
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-[1280px] px-6 lg:px-12 py-10 lg:py-14">
+      <div className="mx-auto max-w-[1280px] px-6 lg:px-12 pb-10 lg:pb-14 pt-4 lg:pt-6">
         <PageTitle lightText="Organizing" accentText="Committee" description="Meet the distinguished members of the ICAIES³ 2026 Organizing Committee." />
         <div className="space-y-10 mt-8">
           {groupedMembers.map(({ role, label, members }) => members.length > 0 && (

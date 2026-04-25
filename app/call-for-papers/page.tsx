@@ -22,7 +22,7 @@ const iconMap: Record<string, React.ReactNode> = {
 export default function CallForPapersPage() {
 	return (
 		<div className="bg-white">
-			<div className="mx-auto max-w-7xl px-6 lg:px-12 py-10 lg:py-14">
+			<div className="mx-auto max-w-7xl px-6 lg:px-12 pb-10 lg:pb-14 pt-4 lg:pt-6">
 				<PageTitle
 					lightText="Call for"
 					accentText="Papers"

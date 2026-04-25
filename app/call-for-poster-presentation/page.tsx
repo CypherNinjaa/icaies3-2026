@@ -67,7 +67,7 @@ const criteria = [
 export default function CallForPosterPage() {
 	return (
 		<div className="bg-white">
-			<div className="mx-auto max-w-7xl px-6 lg:px-12 py-10 lg:py-14">
+			<div className="mx-auto max-w-7xl px-6 lg:px-12 pb-10 lg:pb-14 pt-4 lg:pt-6">
 				<PageTitle
 					lightText="Call for"
 					accentText="Poster Presentation"
@@ -75,7 +75,7 @@ export default function CallForPosterPage() {
 				/>
 
 				{/* Intro Section */}
-				<div className="max-w-4xl mb-12 mt-8">
+				<div className="max-w-4xl mb-12 mt-4">
 					<p className="text-text-body text-base md:text-lg leading-relaxed mb-6">
 						The International Conference on Advances in AI-Enabled Intelligent, Secure and Scalable Systems (ICAIES³ 2026) invites researchers, academicians, and students to present their work through Poster Presentations.
 					</p>
