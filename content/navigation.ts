@@ -36,5 +36,6 @@ export const navigation: NavItem[] = [
 		],
 	},
 	{ label: "Technical Sponsors", href: "/technical-sponsors" },
+	{ label: "Publication Partners", href: "/publication-partner" },
 	{ label: "Contact", href: "/contact" },
 ];

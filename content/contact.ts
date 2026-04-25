@@ -8,13 +8,15 @@ export const contactInfo = {
   },
   contactPersons: [
     {
-      name: "Prof. Vikash Kumar",
-      phone: "+91-9430800553",
+      name: "Prof. Sarvesh Kumar",
+      phone: "+91-6394766348",
+      email: "skumar8@ptn.amity.edu",
       role: "Convenor",
     },
     {
-      name: "Prof. Sarvesh Kumar",
-      phone: "+91-6394766348",
+      name: "Prof. Vikash Kumar",
+      phone: "+91-9430800553",
+      email: "vkumar2@ptn.amity.edu",
       role: "Convenor",
     },
   ],

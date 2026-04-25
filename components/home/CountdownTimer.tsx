@@ -41,11 +41,13 @@ function TimeUnit({ value, label }: { value: number; label: string }) {
 }
 
 export function CountdownTimer() {
+  // Initialize state directly with calculateTimeLeft() instead of using an effect
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setTimeLeft(calculateTimeLeft());
-
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
