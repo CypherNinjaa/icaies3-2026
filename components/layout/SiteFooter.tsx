@@ -6,7 +6,7 @@ import { contactInfo } from "@/content/contact";
 export function SiteFooter() {
 	return (
 		<footer className="bg-footer-bg text-footer-text" id="site-footer">
-			<div className="mx-auto max-w-[1280px] px-6 lg:px-12 py-12">
+			<div className="mx-auto max-w-7xl px-6 lg:px-12 py-12">
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-10">
 					{/* Column 1: About */}
 					<div>
@@ -18,7 +18,7 @@ export function SiteFooter() {
 							by {siteMeta.organizer}, {siteMeta.university}.
 						</p>
 						<div className="flex items-center gap-2 text-sm text-gray-400">
-							<MapPin className="w-4 h-4 text-accent flex-shrink-0" />
+							<MapPin className="w-4 h-4 text-accent shrink-0" />
 							<span>
 								{contactInfo.address.line2}, {contactInfo.address.line3}
 							</span>
@@ -71,7 +71,7 @@ export function SiteFooter() {
 								<li key={person.name} className="text-sm">
 									<p className="text-white font-medium">{person.name}</p>
 									<div className="flex items-center gap-2 text-gray-400 mt-0.5">
-										<Phone className="w-3.5 h-3.5 text-accent" />
+										<Phone className="w-3.5 h-3.5 text-accent shrink-0" />
 										<span>{person.phone}</span>
 									</div>
 								</li>
