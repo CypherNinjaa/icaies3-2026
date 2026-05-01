@@ -40,6 +40,7 @@ export function SiteFooter() {
 								},
 								{ label: "Important Dates", href: "/" },
 								{ label: "Registration", href: "/registration" },
+								{ label: "Program Schedule", href: "/program-schedule" },
 								{
 									label: "Submit Paper",
 									href: "https://cmt3.research.microsoft.com/",

@@ -132,7 +132,7 @@ export const organizingCommittee: CommitteeMember[] = [
 export const technicalCommittee = {
   title: "National Advisory Committee",
   description:
-    "Our distinguished Technical Program Committee ensures the highest quality of peer review and academic rigor for all submissions.",
+    "Our distinguished National Advisory Committee ensures the highest quality of peer review and academic rigor for all submissions.",
   members: [
     { name: "Dr. Rajesh Kumar", affiliation: "IIT Delhi, India" },
     { name: "Dr. Priya Sharma", affiliation: "NIT Patna, India" },
