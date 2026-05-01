@@ -17,7 +17,7 @@ export function AboutInstitution() {
 				{aboutInstitution.images.map((img, index) => (
 					<div
 						key={index}
-						className="relative aspect-[4/3] overflow-hidden rounded-lg"
+						className="relative aspect-4/3 overflow-hidden rounded-lg"
 					>
 						<Image
 							src={img.src}
@@ -42,7 +42,7 @@ export function AboutInstitution() {
 			<ul className="space-y-2.5">
 				{aboutInstitution.bulletPoints.map((point, index) => (
 					<li key={index} className="flex items-start gap-2.5">
-						<CheckCircle className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+						<CheckCircle className="w-4 h-4 text-accent mt-0.5 shrink-0" />
 						<span className="text-sm text-text-body">{point}</span>
 					</li>
 				))}
