@@ -3,6 +3,7 @@ import { ImportantDeadlines } from "@/components/home/ImportantDeadlines";
 import { Announcements } from "@/components/home/Announcements";
 import { CountdownTimer } from "@/components/home/CountdownTimer";
 import { AboutInstitution } from "@/components/home/AboutInstitution";
+import { SubmissionCta } from "@/components/home/SubmissionCta";
 import { Timer } from "lucide-react";
 
 export default function HomePage() {
@@ -49,6 +50,9 @@ export default function HomePage() {
 
 					{/* Right Column — Sidebar */}
 					<aside className="space-y-6 lg:sticky lg:top-20 lg:self-start">
+						{/* Submission CTA */}
+						<SubmissionCta />
+
 						{/* Important Deadlines */}
 						<ImportantDeadlines />
 

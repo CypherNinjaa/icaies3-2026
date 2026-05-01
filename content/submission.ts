@@ -10,7 +10,7 @@ export const submissionContent = {
 
 	sections: [
 		{
-			title: "Submission & Publication",
+			title: "Submission",
 			content: [
 				"All submitted papers must be original work and should not be under consideration for publication elsewhere.",
 				"Authors must ensure that their research paper is original and has not been previously submitted to any other journal or conference. The similarity score of the manuscript should not exceed 10%. Manuscripts with a similarity score of more than 10% will not be processed. Submissions found to contain AI-generated plagiarism or unethical use of AI tools will not be considered for review.",
@@ -39,7 +39,7 @@ export const submissionContent = {
 			title: "Publication Opportunities",
 			content: [
 				"No APC (Free): Accepted papers will be published in Conference Proceedings (Edited Book with ISBN/DOI). Selected extended papers will be considered for publication in Scopus Indexed Books.",
-				"Journal Publication: High-quality papers will be recommended to Scopus/Web of Science Indexed Journals (APC Applicable). Example: Journal of Discrete Mathematical Sciences & Cryptography (Q1).",
+				"Journal Publication with APC: High-quality papers will be recommended to Scopus/Web of Science Indexed Journals (APC Applicable).",
 			],
 		},
 		{

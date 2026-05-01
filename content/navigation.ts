@@ -30,12 +30,17 @@ export const navigation: NavItem[] = [
 		children: [
 			{ label: "Organizing Committee", href: "/committee/organizing" },
 			{
-				label: "Technical Program Committee",
+				label: "National Advisory Committee",
 				href: "/committee/technical",
+			},
+			{
+				label: "International Advisory Committee",
+				href: "",
 			},
 		],
 	},
 	{ label: "Technical Sponsors", href: "/technical-sponsors" },
 	{ label: "Publication Partners", href: "/publication-partner" },
+	{ label: "Program Schedule", href: "#" },
 	{ label: "Contact", href: "/contact" },
 ];

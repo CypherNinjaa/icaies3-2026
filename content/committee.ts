@@ -90,7 +90,7 @@ export const organizingCommittee: CommitteeMember[] = [
   // Co-Convenors
   {
     name: "Dr. Naveen Kumar",
-    designation: "Associate Professor, AIIT, Amity University, Patna",
+    designation: "AIIT, Amity University, Patna",
     role: "co-convenor",
   },
   {
@@ -100,7 +100,7 @@ export const organizingCommittee: CommitteeMember[] = [
   },
   {
     name: "Mr. Prasanna Kumar",
-    designation: "Assistant Professor, AIIT, Amity University, Patna",
+    designation: "AIIT, Amity University, Patna",
     role: "co-convenor",
   },
   {
@@ -111,27 +111,26 @@ export const organizingCommittee: CommitteeMember[] = [
 
   // Members
   { name: "Dr. Sushant Kumar Dubey", designation: "AIIT, Amity University, Patna", role: "member" },
-  { name: "Dr. Ravi Kumar", designation: "Assistant Professor, AIIT, Amity University, Patna", role: "member" },
-  { name: "Dr. Vinay Shankar", designation: "Assistant Professor, AIIT, Amity University, Patna", role: "member" },
-  { name: "Dr. Arvind Kumar Mishra", designation: "AIIT, Amity University, Patna", role: "member" },
-  { name: "Dr. Upasana", designation: "Assistant Professor, AIIT, Amity University, Patna", role: "member" },
-  { name: "Mr. Abhinav Sahay", designation: "Assistant Professor, AIIT, Amity University, Patna", role: "member" },
-  { name: "Mr. S.S Dwivedi", designation: "Assistant Professor, AIIT, Amity University, Patna", role: "member" },
-  { name: "Mr. Ramesh Kumar", designation: "Assistant Professor, AIIT, Amity University, Patna", role: "member" },
-  { name: "Ms. Anu Priya", designation: "Assistant Professor, AIIT, Amity University, Patna", role: "member" },
-  { name: "Ms. Khushboo", designation: "Assistant Professor, AIIT, Amity University, Patna", role: "member" },
-  { name: "Ms. Sakshi Pandey", designation: "Assistant Professor, AIIT, Amity University, Patna", role: "member" },
-  { name: "Ms. Roshni Sharma", designation: "Assistant Professor, AIIT, Amity University, Patna", role: "member" },
-  { name: "Mr. Niraj Kumar Rai", designation: "Assistant Professor, AIIT, Amity University, Patna", role: "member" },
-  { name: "Mr. Suryanarayan Ojha", designation: "Assistant Professor, AIIT, Amity University, Patna", role: "member" },
-  { name: "Mr. Amar Kumar", designation: "Assistant Professor, AIIT, Amity University, Patna", role: "member" },
-  { name: "Mr. Ranjit Choudhary", designation: "Assistant Professor, AIIT, Amity University, Patna", role: "member" },
-  { name: "Ms. Priyadarshini Gupta", designation: "Assistant Professor, AIIT, Amity University, Patna", role: "member" },
-  { name: "Mr. Sunil Kumar", designation: "Academic Coordinator, AIIT, Amity University, Patna", role: "member" },
+  { name: "Dr. Ravi Kumar", designation: "AIIT, Amity University, Patna", role: "member" },
+  { name: "Dr. Vinay Shankar", designation: "AIIT, Amity University, Patna", role: "member" },
+  { name: "Mr. Abhinav Sahay", designation: "AIIT, Amity University, Patna", role: "member" },
+  { name: "Mr. S.S Dwivedi", designation: "AIIT, Amity University, Patna", role: "member" },
+  { name: "Mr. Ramesh Kumar", designation: "AIIT, Amity University, Patna", role: "member" },
+  { name: "Ms. Anu Priya", designation: "AIIT, Amity University, Patna", role: "member" },
+  { name: "Ms. Khushboo", designation: "AIIT, Amity University, Patna", role: "member" },
+  { name: "Ms. Sakshi Pandey", designation: "AIIT, Amity University, Patna", role: "member" },
+  { name: "Ms. Roshni Sharma", designation: "AIIT, Amity University, Patna", role: "member" },
+  { name: "Mr. Niraj Kumar Rai", designation: "AIIT, Amity University, Patna", role: "member" },
+  { name: "Mr. Suryanarayan Ojha", designation: "AIIT, Amity University, Patna", role: "member" },
+  { name: "Mr. Amar Kumar", designation: "AIIT, Amity University, Patna", role: "member" },
+  { name: "Mr. Ranjit Choudhary", designation: "AIIT, Amity University, Patna", role: "member" },
+  { name: "Ms. Priyadarshini Gupta", designation: "AIIT, Amity University, Patna", role: "member" },
+  { name: "Mr. Sunil Kumar", designation: "AIIT, Amity University, Patna", role: "member" },
+  { name: "Mr. Rahul Kumar", designation: "AIIT, Amity University, Patna", role: "member" },
 ];
 
 export const technicalCommittee = {
-  title: "Technical Program Committee",
+  title: "National Advisory Committee",
   description:
     "Our distinguished Technical Program Committee ensures the highest quality of peer review and academic rigor for all submissions.",
   members: [
