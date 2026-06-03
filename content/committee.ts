@@ -104,7 +104,7 @@ export const organizingCommittee: CommitteeMember[] = [
     role: "co-convenor",
   },
   {
-    name: "Ms. Priyadarshini",
+    name: "Dr. Priyadarshini",
     designation: "AIIT, Amity University, Patna",
     role: "co-convenor",
   },
@@ -118,15 +118,16 @@ export const organizingCommittee: CommitteeMember[] = [
   { name: "Mr. Ramesh Kumar", designation: "AIIT, Amity University, Patna", role: "member" },
   { name: "Ms. Anu Priya", designation: "AIIT, Amity University, Patna", role: "member" },
   { name: "Ms. Khushboo", designation: "AIIT, Amity University, Patna", role: "member" },
-  { name: "Ms. Sakshi Pandey", designation: "AIIT, Amity University, Patna", role: "member" },
+  { name: "Dr. Sakshi Pandey", designation: "AIIT, Amity University, Patna", role: "member" },
   { name: "Ms. Roshni Sharma", designation: "AIIT, Amity University, Patna", role: "member" },
   { name: "Mr. Niraj Kumar Rai", designation: "AIIT, Amity University, Patna", role: "member" },
   { name: "Mr. Suryanarayan Ojha", designation: "AIIT, Amity University, Patna", role: "member" },
   { name: "Mr. Amar Kumar", designation: "AIIT, Amity University, Patna", role: "member" },
   { name: "Mr. Ranjit Choudhary", designation: "AIIT, Amity University, Patna", role: "member" },
-  { name: "Ms. Priyadarshini Gupta", designation: "AIIT, Amity University, Patna", role: "member" },
+  // { name: "Ms. Priyadarshini Gupta", designation: "AIIT, Amity University, Patna", role: "member" },
   { name: "Mr. Sunil Kumar", designation: "AIIT, Amity University, Patna", role: "member" },
   { name: "Mr. Rahul Kumar", designation: "AIIT, Amity University, Patna", role: "member" },
+  { name: "Mr. Suman Kumar Mishra", designation: "AIIT, Amity University, Patna", role: "member" },
 ];
 
 export const technicalCommittee = {
