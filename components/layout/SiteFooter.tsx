@@ -91,11 +91,26 @@ export function SiteFooter() {
 				</div>
 
 				{/* Bottom bar */}
-				<div className="border-t border-gray-800 mt-10 pt-6 text-center">
-					<p className="text-xs text-gray-500">
+				<div className="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+					<p className="text-xs text-gray-400">
 						© {new Date().getFullYear()} {siteMeta.acronym} Conference. All
 						Rights Reserved. Not an official University page.
 					</p>
+					<div className="flex items-center gap-4 text-xs text-gray-400">
+						<Link
+							href="/privacy-policy"
+							className="hover:text-accent transition-colors"
+						>
+							Privacy Policy
+						</Link>
+						<span className="text-gray-700">|</span>
+						<Link
+							href="/terms-and-conditions"
+							className="hover:text-accent transition-colors"
+						>
+							Terms &amp; Conditions
+						</Link>
+					</div>
 				</div>
 			</div>
 		</footer>

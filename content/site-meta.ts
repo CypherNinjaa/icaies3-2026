@@ -12,6 +12,6 @@ export const siteMeta = {
 	mode: "Hybrid (Online/Offline)",
 	description:
 		"ICAIES³ 2026 is the premier international forum for Advances in AI-Enabled Intelligent, Secure and Scalable Systems, organized by Amity Institute of Information Technology, Amity University Patna.",
-	url: "https://icaies3.amity.edu",
-	ogImage: "/images/hero-bg.png",
+	url: "https://www.amitypatnaevents.in",
+	ogImage: "/images/hero-bg.webp",
 };

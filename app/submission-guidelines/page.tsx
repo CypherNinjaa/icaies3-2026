@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import { PageTitle } from "@/components/layout/PageTitle";
 import { submissionContent } from "@/content/submission";
 import { FileText, CheckCircle } from "lucide-react";
+import { SiteHeader } from "@/components/layout/SiteHeader";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
 	title: "Submission Guidelines",
@@ -12,6 +14,8 @@ export const metadata: Metadata = {
 export default function SubmissionGuidelinesPage() {
 	return (
 		<div className="bg-white">
+			<SiteHeader />
+			<BreadcrumbSchema pageName="Submission Guidelines" route="/submission-guidelines" />
 			<div className="mx-auto max-w-7xl px-6 lg:px-12 pb-10 lg:pb-14 pt-4 lg:pt-6">
 				<PageTitle
 					lightText="Submission"

@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import { PageTitle } from "@/components/layout/PageTitle";
 import { organizingCommittee, roleLabels, roleOrder } from "@/content/committee";
 import { User, Crown, Award, Users, BookOpen, Star, Bookmark } from "lucide-react";
+import { SiteHeader } from "@/components/layout/SiteHeader";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: "Organizing Committee",
@@ -28,6 +30,8 @@ export default function OrganizingCommitteePage() {
 
   return (
     <div className="bg-white">
+      <SiteHeader />
+      <BreadcrumbSchema pageName="Organizing Committee" route="/committee/organizing" />
       <div className="mx-auto max-w-[1280px] px-6 lg:px-12 pb-10 lg:pb-14 pt-4 lg:pt-6">
         <PageTitle lightText="Organizing" accentText="Committee" description="Meet the distinguished members of the ICAIES³ 2026 Organizing Committee." />
         <div className="space-y-10 mt-8">

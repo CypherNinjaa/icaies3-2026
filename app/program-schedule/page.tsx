@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import { PageTitle } from "@/components/layout/PageTitle";
 import { programSchedule, scheduleNotes } from "@/content/schedule";
+import { SiteHeader } from "@/components/layout/SiteHeader";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 import {
 	Clock,
 	MapPin,
@@ -70,6 +72,8 @@ const eventTypeConfig: Record<
 export default function ProgramSchedulePage() {
 	return (
 		<div className="bg-white">
+			<SiteHeader />
+			<BreadcrumbSchema pageName="Program Schedule" route="/program-schedule" />
 			<div className="mx-auto max-w-7xl px-6 lg:px-12 pb-10 lg:pb-14 pt-4 lg:pt-6">
 				<PageTitle
 					lightText="Program"
@@ -162,7 +166,7 @@ export default function ProgramSchedulePage() {
 															</span>
 														</div>
 														{event.track && (
-															<span className="text-xs font-medium text-accent bg-accent/10 px-2.5 py-1 rounded-full">
+															<span className="text-xs font-medium text-accent-contrast bg-accent/10 px-2.5 py-1 rounded-full">
 																{event.track}
 															</span>
 														)}

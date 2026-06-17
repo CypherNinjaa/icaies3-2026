@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import { PageTitle } from "@/components/layout/PageTitle";
 import { BookOpen, Globe, CheckCircle2 } from "lucide-react";
+import { SiteHeader } from "@/components/layout/SiteHeader";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
 	title: "Publication Partners",
@@ -21,7 +23,6 @@ type PublicationJournal = {
 };
 
 const publicationsWithAPC: PublicationJournal[] = [
-	/*
 	{
 		title: "Journal of Discrete Mathematical Sciences & Cryptography",
 		indexing: "Scopus Q1, WoS Q2",
@@ -42,12 +43,13 @@ const publicationsWithAPC: PublicationJournal[] = [
 		indexing: "Scopus",
 		status: "Approval Pending",
 	},
-	*/
 ];
 
 export default function PublicationPartnerPage() {
 	return (
 		<div className="bg-white">
+			<SiteHeader />
+			<BreadcrumbSchema pageName="Publication Partners" route="/publication-partner" />
 			<div className="mx-auto max-w-7xl px-6 lg:px-12 pb-10 lg:pb-14 pt-4 lg:pt-6">
 				<PageTitle
 					lightText="Publication"
@@ -63,7 +65,7 @@ export default function PublicationPartnerPage() {
 								<BookOpen className="w-6 h-6 text-accent" />
 							</div>
 							<h2 className="text-xl font-bold text-primary">
-								Publication <span className="text-accent">without</span> APC
+								Publication <span className="text-accent-contrast">without</span> APC
 							</h2>
 						</div>
 						<ul className="space-y-5">
@@ -89,7 +91,7 @@ export default function PublicationPartnerPage() {
 								<Globe className="w-6 h-6 text-accent" />
 							</div>
 							<h2 className="text-xl font-bold text-primary">
-								Publication <span className="text-accent">with</span> APC
+								Publication <span className="text-accent-contrast">with</span> APC
 							</h2>
 						</div>
 
@@ -112,7 +114,7 @@ export default function PublicationPartnerPage() {
 										{journal.title}
 									</h3>
 									<div className="flex flex-wrap gap-2">
-										<span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-accent/10 text-accent-dark">
+										<span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-accent/10 text-accent-contrast">
 											{journal.indexing}
 										</span>
 										<span

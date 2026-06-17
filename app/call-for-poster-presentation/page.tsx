@@ -4,6 +4,8 @@ import { importantDates } from "@/content/dates";
 import Link from "next/link";
 import { Calendar, CheckCircle2, FileText, LayoutTemplate, Printer, Users, Sparkles } from "lucide-react";
 import { contactInfo } from "@/content/contact";
+import { SiteHeader } from "@/components/layout/SiteHeader";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
 	title: "Call for Poster Presentation",
@@ -67,6 +69,8 @@ const criteria = [
 export default function CallForPosterPage() {
 	return (
 		<div className="bg-white">
+			<SiteHeader />
+			<BreadcrumbSchema pageName="Call for Poster Presentation" route="/call-for-poster-presentation" />
 			<div className="mx-auto max-w-7xl px-6 lg:px-12 pb-10 lg:pb-14 pt-4 lg:pt-6">
 				<PageTitle
 					lightText="Call for"

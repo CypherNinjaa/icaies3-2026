@@ -3,6 +3,9 @@ import { PageTitle } from "@/components/layout/PageTitle";
 import { contactInfo } from "@/content/contact";
 import { MapPin, Phone, Mail, User, ExternalLink } from "lucide-react";
 import Link from "next/link";
+import { SiteHeader } from "@/components/layout/SiteHeader";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+import { ContactPageSchema } from "@/components/seo/ContactPageSchema";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -18,6 +21,9 @@ const MAPS_LINK_URL = "https://maps.app.goo.gl/X81ZRHEV5GdTZ4Rw9";
 export default function ContactPage() {
   return (
     <div className="bg-white">
+      <SiteHeader />
+      <BreadcrumbSchema pageName="Contact" route="/contact" />
+      <ContactPageSchema />
       <div className="mx-auto max-w-[1280px] px-6 lg:px-12 pb-10 lg:pb-14 pt-4 lg:pt-6">
         <PageTitle
           lightText=""

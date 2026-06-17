@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import { PageTitle } from "@/components/layout/PageTitle";
 import { technicalCommittee } from "@/content/committee";
 import { Users } from "lucide-react";
+import { SiteHeader } from "@/components/layout/SiteHeader";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: "National Advisory Committee",
@@ -12,6 +14,8 @@ export const metadata: Metadata = {
 export default function NationalAdvisoryCommitteePage() {
   return (
     <div className="bg-white">
+      <SiteHeader />
+      <BreadcrumbSchema pageName="National Advisory Committee" route="/committee/technical" />
       <div className="mx-auto max-w-[1280px] px-6 lg:px-12 pb-10 lg:pb-14 pt-4 lg:pt-6">
         <PageTitle
           lightText="National Advisory"

@@ -1,16 +1,24 @@
 import { Metadata } from "next";
 import { PageTitle } from "@/components/layout/PageTitle";
 import { Mic } from "lucide-react";
+import { SiteHeader } from "@/components/layout/SiteHeader";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: "Keynote Speakers",
   description:
     "Keynote speakers for ICAIES³ 2026 — to be announced soon.",
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function KeynoteSpeakersPage() {
   return (
     <div className="bg-white">
+      <SiteHeader />
+      <BreadcrumbSchema pageName="Keynote Speakers" route="/keynote-speakers" />
       <div className="mx-auto max-w-[1280px] px-6 lg:px-12 pb-10 lg:pb-14 pt-4 lg:pt-6">
         <PageTitle
           lightText="Keynote"

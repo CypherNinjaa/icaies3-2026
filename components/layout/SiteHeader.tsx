@@ -2,7 +2,7 @@ import Image from "next/image";
 import { MapPin, Calendar, Monitor } from "lucide-react";
 import { siteMeta } from "@/content/site-meta";
 
-export function SiteHeader() {
+export function SiteHeader({ isHome = false }: { isHome?: boolean }) {
 	return (
 		<header className="relative w-full overflow-hidden" id="site-header">
 			{/* Background Image */}
@@ -70,13 +70,23 @@ export function SiteHeader() {
 					<p className="text-accent text-sm font-semibold tracking-widest uppercase mb-3">
 						{siteMeta.acronym} {siteMeta.year}
 					</p>
-					<h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-[3.4rem] text-white font-bold leading-tight tracking-tight">
-						<span className="block">
-							Advances in <span className="text-accent">AI-Enabled</span>
-						</span>
-						<span className="block mt-1">Intelligent &amp; Secure</span>
-						<span className="block mt-1">Systems</span>
-					</h1>
+					{isHome ? (
+						<h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-[3.4rem] text-white font-bold leading-tight tracking-tight">
+							<span className="block">
+								Advances in <span className="text-accent">AI-Enabled</span>
+							</span>
+							<span className="block mt-1">Intelligent &amp; Secure</span>
+							<span className="block mt-1">Systems</span>
+						</h1>
+					) : (
+						<p className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-[3.4rem] text-white font-bold leading-tight tracking-tight">
+							<span className="block">
+								Advances in <span className="text-accent">AI-Enabled</span>
+							</span>
+							<span className="block mt-1">Intelligent &amp; Secure</span>
+							<span className="block mt-1">Systems</span>
+						</p>
+					)}
 				</div>
 
 				{/* Meta Info */}

@@ -5,16 +5,24 @@ import {
 	registrationFeeSchedules,
 } from "@/content/registration";
 import { CreditCard, CheckCircle } from "lucide-react";
+import { SiteHeader } from "@/components/layout/SiteHeader";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
 	title: "Registration",
 	description:
 		"Register for ICAIES³ 2026. View registration notes, fee schedule, and payment instructions.",
+	robots: {
+		index: false,
+		follow: true,
+	},
 };
 
 export default function RegistrationPage() {
 	return (
 		<div className="bg-white">
+			<SiteHeader />
+			<BreadcrumbSchema pageName="Registration" route="/registration" />
 			<div className="mx-auto max-w-7xl px-6 lg:px-12 pb-10 lg:pb-14 pt-4 lg:pt-6">
 				<PageTitle
 					lightText=""

@@ -5,10 +5,12 @@ import { CountdownTimer } from "@/components/home/CountdownTimer";
 import { AboutInstitution } from "@/components/home/AboutInstitution";
 import { SubmissionCta } from "@/components/home/SubmissionCta";
 import { Timer } from "lucide-react";
+import { SiteHeader } from "@/components/layout/SiteHeader";
 
 export default function HomePage() {
 	return (
 		<div className="bg-white">
+			<SiteHeader isHome={true} />
 			<div className="mx-auto max-w-7xl px-6 lg:px-12 pb-10 lg:pb-14 pt-4 lg:pt-6">
 				{/* 2-Column Layout: Main (left) + Sidebar (right) */}
 				<div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-10 lg:gap-14">

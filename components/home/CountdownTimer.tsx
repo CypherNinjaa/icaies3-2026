@@ -45,14 +45,18 @@ export function CountdownTimer() {
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setTimeLeft(calculateTimeLeft());
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    return () => clearInterval(timer);
+    const initTimer = setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 0);
+
+    return () => {
+      clearInterval(timer);
+      clearTimeout(initTimer);
+    };
   }, []);
 
   if (!timeLeft) {

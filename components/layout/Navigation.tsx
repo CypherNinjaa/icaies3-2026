@@ -42,8 +42,8 @@ function NavDropdown({
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors rounded-md hover:text-accent hover:bg-accent/5 ${
-          isActive ? "text-accent font-semibold" : "text-primary"
+        className={`flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors rounded-md hover:text-accent-contrast hover:bg-accent/5 ${
+          isActive ? "text-accent-contrast font-semibold" : "text-primary"
         }`}
         aria-expanded={isOpen}
         aria-haspopup="true"
@@ -64,7 +64,7 @@ function NavDropdown({
               href={child.href || "#"}
               target={child.external ? "_blank" : undefined}
               rel={child.external ? "noopener noreferrer" : undefined}
-              className="block px-4 py-2.5 text-sm text-text-body hover:bg-bg-cream hover:text-accent transition-colors"
+              className="block px-4 py-2.5 text-sm text-text-body hover:bg-bg-cream hover:text-accent-contrast transition-colors"
               onClick={() => setIsOpen(false)}
             >
               {child.label}
@@ -182,7 +182,7 @@ function MobileNav({
                     onClick={() => toggleExpand(item.label)}
                     className={`flex items-center justify-between w-full px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
                       isChildActive
-                        ? "text-accent bg-accent/5"
+                        ? "text-accent-contrast bg-accent/5"
                         : "text-primary hover:bg-bg-cream"
                     }`}
                   >
@@ -211,8 +211,8 @@ function MobileNav({
                           onClick={onClose}
                           className={`block px-3 py-2.5 text-sm rounded-lg transition-colors ${
                             pathname === child.href
-                              ? "text-accent font-semibold bg-accent/5"
-                              : "text-text-body hover:text-accent hover:bg-bg-cream"
+                              ? "text-accent-contrast font-semibold bg-accent/5"
+                              : "text-text-body hover:text-accent-contrast hover:bg-bg-cream"
                           }`}
                         >
                           {child.label}
@@ -236,8 +236,8 @@ function MobileNav({
                 onClick={onClose}
                 className={`block px-4 py-3 text-sm font-medium rounded-lg transition-colors mb-1 ${
                   pathname === item.href
-                    ? "text-accent font-semibold bg-accent/5"
-                    : "text-primary hover:bg-bg-cream hover:text-accent"
+                    ? "text-accent-contrast font-semibold bg-accent/5"
+                    : "text-primary hover:bg-bg-cream hover:text-accent-contrast"
                 }`}
               >
                 {item.label}
@@ -305,9 +305,9 @@ export function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href || "#"}
-                  className={`px-3 py-2 text-sm font-medium transition-colors rounded-md hover:text-accent hover:bg-accent/5 ${
+                  className={`px-3 py-2 text-sm font-medium transition-colors rounded-md hover:text-accent-contrast hover:bg-accent/5 ${
                     active
-                      ? "text-accent font-semibold"
+                      ? "text-accent-contrast font-semibold"
                       : "text-primary"
                   }`}
                 >

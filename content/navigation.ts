@@ -33,10 +33,6 @@ export const navigation: NavItem[] = [
 				label: "National Advisory Committee",
 				href: "/committee/technical",
 			},
-			{
-				label: "International Advisory Committee",
-				href: "",
-			},
 		],
 	},
 	{ label: "Technical Sponsors", href: "/technical-sponsors" },

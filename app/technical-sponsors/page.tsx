@@ -2,15 +2,23 @@ import { Metadata } from "next";
 import { PageTitle } from "@/components/layout/PageTitle";
 import { sponsorsContent } from "@/content/sponsors";
 import { Handshake } from "lucide-react";
+import { SiteHeader } from "@/components/layout/SiteHeader";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: "Technical Sponsors",
   description: "Technical sponsors and partners of ICAIES³ 2026.",
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function TechnicalSponsorsPage() {
   return (
     <div className="bg-white">
+      <SiteHeader />
+      <BreadcrumbSchema pageName="Technical Sponsors" route="/technical-sponsors" />
       <div className="mx-auto max-w-[1280px] px-6 lg:px-12 pb-10 lg:pb-14 pt-4 lg:pt-6">
         <PageTitle lightText="Technical" accentText="Sponsors" description={sponsorsContent.description} />
         <div className="max-w-2xl mx-auto mt-8 text-center">

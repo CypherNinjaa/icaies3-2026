@@ -8,6 +8,7 @@
   --color-accent: #E8B816;
   --color-accent-dark: #C49A0E;
   --color-accent-light: #F5D04A;
+  --color-accent-contrast: #997300;
 
   /* Backgrounds */
   --color-bg-cream: #FBF8F2;
@@ -47,7 +48,7 @@ body {
 /* Custom heading style pattern (italic + bold accent) */
 .page-title-accent {
   font-family: var(--font-serif);
-  color: var(--color-accent);
+  color: var(--color-accent-contrast);
   font-weight: 700;
 }
 

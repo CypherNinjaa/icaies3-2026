@@ -3,6 +3,8 @@ import { PageTitle } from "@/components/layout/PageTitle";
 import { tracks } from "@/content/tracks";
 import { Brain, Shield, Server, Wifi, Cpu, Sparkles } from "lucide-react";
 import Link from "next/link";
+import { SiteHeader } from "@/components/layout/SiteHeader";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
 	title: "Call for Papers",
@@ -22,6 +24,8 @@ const iconMap: Record<string, React.ReactNode> = {
 export default function CallForPapersPage() {
 	return (
 		<div className="bg-white">
+			<SiteHeader />
+			<BreadcrumbSchema pageName="Call for Papers" route="/call-for-papers" />
 			<div className="mx-auto max-w-7xl px-6 lg:px-12 pb-10 lg:pb-14 pt-4 lg:pt-6">
 				<PageTitle
 					lightText="Call for"
