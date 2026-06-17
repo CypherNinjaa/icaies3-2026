@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: "Content-Security-Policy",
-            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.amitypatnaevents.in; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://www.amitypatnaevents.in https://patna.amity.edu; font-src 'self' data:; connect-src 'self' https://www.amitypatnaevents.in; frame-src 'self' https://www.google.com; object-src 'none'; upgrade-insecure-requests;",
+            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.amitypatnaevents.in; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://www.amitypatnaevents.in https://patna.amity.edu; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://www.amitypatnaevents.in; frame-src 'self' https://www.google.com; object-src 'none'; upgrade-insecure-requests;",
           },
           {
             key: "Strict-Transport-Security",

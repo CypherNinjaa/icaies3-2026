@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		"/committee/technical",
 		"/privacy-policy",
 		"/terms-and-conditions",
+		"/developer",
 	];
 
 	return routes.map((route) => ({

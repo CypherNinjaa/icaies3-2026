@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Poppins, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/layout/Navigation";
 import { SiteFooter } from "@/components/layout/SiteFooter";
@@ -8,19 +7,13 @@ import { BackToTop } from "@/components/ui/BackToTop";
 import { GlobalSchema } from "@/components/seo/GlobalSchema";
 import { CookieConsent } from "@/components/ui/CookieConsent";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-sans",
-  display: "swap",
-});
+const poppins = {
+  variable: "font-sans",
+};
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-serif",
-  display: "swap",
-});
+const playfair = {
+  variable: "font-serif",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.amitypatnaevents.in"),
@@ -47,6 +40,10 @@ export const metadata: Metadata = {
     description: siteMeta.description,
     images: [siteMeta.ogImage],
   },
+  icons: {
+    icon: "/logos/amity-logo.png",
+    apple: "/logos/amity-logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -56,6 +53,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${poppins.variable} ${playfair.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet" />
+      </head>
       <body className="antialiased">
         <GlobalSchema />
         <a

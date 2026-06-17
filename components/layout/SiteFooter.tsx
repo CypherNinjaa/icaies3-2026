@@ -92,10 +92,21 @@ export function SiteFooter() {
 
 				{/* Bottom bar */}
 				<div className="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
-					<p className="text-xs text-gray-400">
-						© {new Date().getFullYear()} {siteMeta.acronym} Conference. All
-						Rights Reserved. Not an official University page.
-					</p>
+					<div className="space-y-1 text-xs text-gray-400">
+						<p>
+							© {new Date().getFullYear()} {siteMeta.acronym} Conference. All
+							Rights Reserved. Not an official University page.
+						</p>
+						<p className="text-gray-500">
+							Designed &amp; Developed by{" "}
+							<Link
+								href="/developer"
+								className="text-gray-400 hover:text-accent transition-colors font-medium underline underline-offset-2"
+							>
+								Vikash Kumar (vikashintech)
+							</Link>
+						</p>
+					</div>
 					<div className="flex items-center gap-4 text-xs text-gray-400">
 						<Link
 							href="/privacy-policy"
