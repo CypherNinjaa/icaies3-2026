@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		"/contact",
 		"/committee/organizing",
 		"/committee/technical",
+		"/committee/international",
 		"/privacy-policy",
 		"/terms-and-conditions",
 		"/developer",

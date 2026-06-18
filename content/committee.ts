@@ -72,12 +72,17 @@ export const organizingCommittee: CommitteeMember[] = [
 
   // Convenors
   {
-    name: "Mr. Sarvesh Kumar",
+    name: "Dr. Naveen Kumar",
     designation: "AIIT, Amity University, Patna",
     role: "convenor",
   },
   {
     name: "Dr. Arvind Kumar Mishra",
+    designation: "AIIT, Amity University, Patna",
+    role: "convenor",
+  },
+  {
+    name: "Mr. Sarvesh Kumar",
     designation: "AIIT, Amity University, Patna",
     role: "convenor",
   },
@@ -155,6 +160,21 @@ export const technicalCommittee = {
     { name: "Dr. Ritu Gupta", affiliation: "IIT Indore, India" },
     { name: "Dr. Vinod Sharma", affiliation: "NIT Hamirpur, India" },
     { name: "Dr. Smita Jha", affiliation: "IIIT Lucknow, India" },
+  ],
+};
+
+export const internationalCommittee = {
+  title: "International Advisory Committee",
+  description:
+    "Our distinguished International Advisory Committee brings together leading global experts to guide the strategic academic direction of ICAIES³ 2026.",
+  members: [
+    { name: "Prof. Liliana Guran", affiliation: "Babeș-Bolyai University, Romania" },
+    { name: "Dr. Prabha Sana", affiliation: "Infineon Technology, Germany" },
+    { name: "Prof. D L Suthar", affiliation: "Wollo University, Dessie, Ethiopia" },
+    { name: "Prof. Georgia Irina Oros", affiliation: "University of Oradea, Romania" },
+    { name: "Prof. Bremananth Ramachandran", affiliation: "MIS, A'Sharqyiah University, Ibra, Oman" },
+    { name: "Prof. Anurag Srivastava", affiliation: "West Virginia University, US" },
+    { name: "Prof. Akshay Rathore", affiliation: "Singapore Institute of Technology (SIT), Singapore" },
   ],
 };
 

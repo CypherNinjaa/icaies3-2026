@@ -6,7 +6,7 @@ export interface ImportantDate {
 
 export const importantDates: ImportantDate[] = [
 	{
-		date: "March 15, 2026",
+		date: "July 01, 2026",
 		label: "Paper Submission Opens",
 	},
 	{

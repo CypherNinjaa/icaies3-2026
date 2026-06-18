@@ -30,6 +30,10 @@ export const navigation: NavItem[] = [
 		children: [
 			{ label: "Organizing Committee", href: "/committee/organizing" },
 			{
+				label: "International Advisory Committee",
+				href: "/committee/international",
+			},
+			{
 				label: "National Advisory Committee",
 				href: "/committee/technical",
 			},
