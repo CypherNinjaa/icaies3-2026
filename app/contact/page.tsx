@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { PageTitle } from "@/components/layout/PageTitle";
 import { contactInfo } from "@/content/contact";
-import { MapPin, Phone, Mail, User, ExternalLink } from "lucide-react";
+import { MapPin, Mail, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
@@ -50,48 +50,22 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Contact Persons */}
-            {contactInfo.contactPersons.map((person) => (
-              <div
-                key={person.name}
-                className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary">
-                    <User className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h3 className="text-base font-bold text-primary">
-                      {person.name}
-                    </h3>
-                    <p className="text-xs text-text-muted">{person.role}</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 ml-[52px]">
-                  <Phone className="w-4 h-4 text-accent" />
-                  <a
-                    href={`tel:${person.phone}`}
-                    className="text-sm text-text-body hover:text-accent transition-colors"
-                  >
-                    {person.phone}
-                  </a>
-                </div>
-              </div>
-            ))}
-
-            {/* Email */}
+            {/* Contact Information */}
             <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center gap-3">
-                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-accent/10 text-accent">
-                  <Mail className="w-5 h-5" />
+              <div className="flex items-start gap-4">
+                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-accent/10 text-accent shrink-0">
+                  <Mail className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider">
-                    Email
+                  <h3 className="text-lg font-bold text-primary mb-2">
+                    Contact Information
                   </h3>
+                  <p className="text-sm text-text-body leading-relaxed mb-4">
+                    For any queries, please contact the organizing committee:
+                  </p>
                   <a
                     href={`mailto:${contactInfo.email}`}
-                    className="text-base font-medium text-primary hover:text-accent transition-colors"
+                    className="inline-flex items-center text-base font-bold text-primary hover:text-accent transition-colors underline underline-offset-4"
                   >
                     {contactInfo.email}
                   </a>

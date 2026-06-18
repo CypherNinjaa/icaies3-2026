@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { PageTitle } from "@/components/layout/PageTitle";
 import { importantDates } from "@/content/dates";
 import Link from "next/link";
-import { Calendar, CheckCircle2, FileText, LayoutTemplate, Printer, Users, Sparkles } from "lucide-react";
+import { Calendar, CheckCircle2, FileText, LayoutTemplate, Printer, Users, Sparkles, Mail } from "lucide-react";
 import { contactInfo } from "@/content/contact";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
@@ -156,17 +156,18 @@ export default function CallForPosterPage() {
 
 					{/* Contact Information */}
 					<div className="bg-bg-cream rounded-xl p-8 border border-gray-100">
-						<h3 className="text-xl font-bold text-primary mb-6">Contact Information</h3>
-						<p className="text-sm text-text-body mb-6">
+						<h3 className="text-xl font-bold text-primary mb-4">Contact Information</h3>
+						<p className="text-sm text-text-body mb-4">
 							For any queries related to the poster presentations, please contact the organizing committee:
 						</p>
-						<div className="space-y-4">
-							{contactInfo.contactPersons.map((person, idx) => (
-								<div key={idx} className="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-white rounded-lg border border-gray-100">
-									<span className="font-semibold text-primary">{person.name}</span>
-									<span className="text-accent text-sm font-medium">{person.phone}</span>
-								</div>
-							))}
+						<div className="flex items-center gap-2">
+							<Mail className="w-5 h-5 text-accent-contrast shrink-0" />
+							<a
+								href={`mailto:${contactInfo.email}`}
+								className="text-base font-bold text-primary hover:text-accent transition-colors underline underline-offset-4"
+							>
+								{contactInfo.email}
+							</a>
 						</div>
 					</div>
 				</div>

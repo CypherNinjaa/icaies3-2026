@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { PageTitle } from "@/components/layout/PageTitle";
-import { BookOpen, Globe, CheckCircle2 } from "lucide-react";
+import { Globe } from "lucide-react";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 		"Discover publication opportunities for accepted papers at ICAIES³ 2026, including Scopus and WoS indexed journals and conference proceedings.",
 };
 
+/*
 const publicationsWithoutAPC = [
 	"All Accepted Full-Length Papers will be Recommended for Publication in the conference proceedings as an edited book with ISBN and DOI, without APC.",
 	"Selected extended papers will be recommended as a chapter and will go for publication in Scopus Indexed Edited Book without APC. (Subject to acceptance - as per Scope of Edited Book).",
@@ -44,6 +45,7 @@ const publicationsWithAPC: PublicationJournal[] = [
 		status: "Approval Pending",
 	},
 ];
+*/
 
 export default function PublicationPartnerPage() {
 	return (
@@ -57,8 +59,22 @@ export default function PublicationPartnerPage() {
 					description="Explore the publication avenues available for accepted and presented papers at ICAIES³ 2026."
 				/>
 
+				{/* Coming Soon State */}
+				<div className="max-w-2xl mx-auto mt-12 text-center py-12">
+					<div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-accent/10 mb-6">
+						<Globe className="w-12 h-12 text-accent" />
+					</div>
+					<h3 className="text-2xl font-serif font-bold text-primary mb-3">
+						Will be updated Soon
+					</h3>
+					<p className="text-text-body leading-relaxed max-w-lg mx-auto">
+						We are currently finalizing details with our publication partners and Scopus/ESCI indexed journals. 
+						Please check back soon for the complete list of publishing avenues for ICAIES³ 2026.
+					</p>
+				</div>
+
+				{/* 
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8">
-					{/* Without APC */}
 					<div className="bg-bg-cream rounded-xl p-8 border border-gray-100 h-full">
 						<div className="flex items-center gap-3 mb-6">
 							<div className="p-3 bg-white rounded-xl shadow-sm">
@@ -82,7 +98,6 @@ export default function PublicationPartnerPage() {
 						</ul>
 					</div>
 
-					{/* With APC */}
 					<div className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm h-full relative overflow-hidden">
 						<div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-bl-full -z-10" />
 
@@ -132,6 +147,7 @@ export default function PublicationPartnerPage() {
 						</div>
 					</div>
 				</div>
+				*/}
 			</div>
 		</div>
 	);

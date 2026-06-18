@@ -168,7 +168,7 @@ export const internationalCommittee = {
   description:
     "Our distinguished International Advisory Committee brings together leading global experts to guide the strategic academic direction of ICAIES³ 2026.",
   members: [
-    { name: "Prof. Liliana Guran", affiliation: "Babeș-Bolyai University, Romania" },
+    // { name: "Prof. Liliana Guran", affiliation: "Babeș-Bolyai University, Romania" },
     { name: "Dr. Prabha Sana", affiliation: "Infineon Technology, Germany" },
     { name: "Prof. D L Suthar", affiliation: "Wollo University, Dessie, Ethiopia" },
     { name: "Prof. Georgia Irina Oros", affiliation: "University of Oradea, Romania" },

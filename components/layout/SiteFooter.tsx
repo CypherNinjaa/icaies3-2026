@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { siteMeta } from "@/content/site-meta";
 import { contactInfo } from "@/content/contact";
 
@@ -65,28 +65,20 @@ export function SiteFooter() {
 					{/* Column 3: Contact */}
 					<div>
 						<h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-							Contact
+							Contact Us
 						</h3>
-						<ul className="space-y-3">
-							{contactInfo.contactPersons.map((person) => (
-								<li key={person.name} className="text-sm">
-									<p className="text-white font-medium">{person.name}</p>
-									<div className="flex items-center gap-2 text-gray-400 mt-0.5">
-										<Phone className="w-3.5 h-3.5 text-accent shrink-0" />
-										<span>{person.phone}</span>
-									</div>
-								</li>
-							))}
-							<li className="flex items-center gap-2 text-sm text-gray-400">
-								<Mail className="w-3.5 h-3.5 text-accent" />
-								<a
-									href={`mailto:${contactInfo.email}`}
-									className="hover:text-accent transition-colors"
-								>
-									{contactInfo.email}
-								</a>
-							</li>
-						</ul>
+						<p className="text-sm text-gray-400 leading-relaxed mb-4">
+							For any queries, please contact the organizing committee:
+						</p>
+						<div className="flex items-center gap-2 text-sm text-gray-400">
+							<Mail className="w-3.5 h-3.5 text-accent" />
+							<a
+								href={`mailto:${contactInfo.email}`}
+								className="hover:text-accent transition-colors underline underline-offset-2"
+							>
+								{contactInfo.email}
+							</a>
+						</div>
 					</div>
 				</div>
 
