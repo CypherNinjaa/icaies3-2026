@@ -93,11 +93,11 @@ export const organizingCommittee: CommitteeMember[] = [
   },
 
   // Co-Convenors
-  {
-    name: "Dr. Naveen Kumar",
-    designation: "AIIT, Amity University, Patna",
-    role: "co-convenor",
-  },
+  // {
+  //   name: "Dr. Naveen Kumar",
+  //   designation: "AIIT, Amity University, Patna",
+  //   role: "co-convenor",
+  // },
   {
     name: "Dr. Upasana",
     designation: "AIIT, Amity University, Patna",
@@ -160,6 +160,7 @@ export const technicalCommittee = {
     { name: "Dr. Ritu Gupta", affiliation: "IIT Indore, India" },
     { name: "Dr. Vinod Sharma", affiliation: "NIT Hamirpur, India" },
     { name: "Dr. Smita Jha", affiliation: "IIIT Lucknow, India" },
+    { name: "Dr. Neeraj Kumar Verma", affiliation: "Manipal University Jaipur, Rajasthan, India" },
   ],
 };
 
