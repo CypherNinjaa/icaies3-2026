@@ -28,7 +28,7 @@ export function GlobalSchema() {
 
 	const eventSchema = {
 		"@context": "https://schema.org",
-		"@type": "Event",
+		"@type": "EducationEvent",
 		"@id": "https://www.amitypatnaevents.in/#event",
 		name: `${siteMeta.title} — ${siteMeta.fullTitle}`,
 		startDate: "2026-10-21T09:00:00+05:30",
@@ -59,6 +59,10 @@ export function GlobalSchema() {
 			"@type": "EducationalOrganization",
 			name: siteMeta.organizer,
 			url: "https://www.amitypatnaevents.in",
+		},
+		performer: {
+			"@type": "PerformingGroup",
+			name: "Keynote Speakers & Presenters (TBA)",
 		},
 		offers: {
 			"@type": "Offer",
