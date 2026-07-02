@@ -27,7 +27,7 @@ export const importantDates: ImportantDate[] = [
 	},
 ];
 
-export const conferenceDateISO = "2026-10-21T09:00:00+05:30";
+export const conferenceDateISO = "2026-11-19T09:00:00+05:30";
 
 export const announcements: string[] = [
 	"Best Paper Award Will be Given for Each Track.",

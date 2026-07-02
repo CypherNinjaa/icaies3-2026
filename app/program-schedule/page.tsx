@@ -18,7 +18,7 @@ import {
 export const metadata: Metadata = {
 	title: "Program Schedule",
 	description:
-		"ICAIES³ 2026 conference program schedule. View the detailed 2-day schedule for October 21-22, 2026 including keynotes, technical sessions, poster presentations, and ceremonies.",
+		"ICAIES³ 2026 conference program schedule. View the detailed 2-day schedule for November 19-20, 2026 including keynotes, technical sessions, poster presentations, and ceremonies.",
 };
 
 const eventTypeConfig: Record<
@@ -78,14 +78,14 @@ export default function ProgramSchedulePage() {
 				<PageTitle
 					lightText="Program"
 					accentText="Schedule"
-					description="Detailed program schedule for ICAIES³ 2026 conference — October 21-22, 2026 at Amity University, Patna."
+					description="Detailed program schedule for ICAIES³ 2026 conference — November 19-20, 2026 at Amity University, Patna."
 				/>
 
 				{/* Conference Info Bar */}
 				<div className="flex flex-wrap items-center gap-4 sm:gap-6 mb-8 p-4 rounded-xl bg-bg-cream border border-gray-100">
 					<div className="flex items-center gap-2 text-sm text-text-body">
 						<CalendarDays className="w-4 h-4 text-accent" />
-						<span className="font-medium">October 21-22, 2026</span>
+						<span className="font-medium">November 19-20, 2026</span>
 					</div>
 					<div className="flex items-center gap-2 text-sm text-text-body">
 						<MapPin className="w-4 h-4 text-accent" />
