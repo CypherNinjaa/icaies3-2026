@@ -61,8 +61,12 @@ export default function PrivacyPolicyPage() {
 					<p>
 						If you have any questions about this Privacy Policy, please contact
 						us at{" "}
-						<a href="mailto:icaies3@amity.edu" className="text-accent-contrast underline">
-							icaies3@amity.edu
+						<a href="mailto:conference.aiit@ptn.amity.edu" className="text-accent-contrast underline">
+							conference.aiit@ptn.amity.edu
+						</a>
+						{" "}or{" "}
+						<a href="mailto:aiit@ptn.amity.edu" className="text-accent-contrast underline">
+							aiit@ptn.amity.edu
 						</a>
 						.
 					</p>

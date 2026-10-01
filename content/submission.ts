@@ -6,56 +6,74 @@ export interface SubmissionSection {
 export const submissionContent = {
 	title: "Submission Guidelines",
 	pageDescription:
-		"All submissions to ICAIES³ 2026 must adhere to the following guidelines to ensure a fair and rigorous review process.",
+		"To submit a paper for ICAIES³ 2026, authors must follow the conference proceedings format. All submissions will undergo rigorous peer review according to conference guidelines.",
 
 	sections: [
 		{
-			title: "Submission",
+			title: "Submission Guidelines & Formatting",
 			content: [
-				"All submitted papers must be original work and should not be under consideration for publication elsewhere.",
-				"Authors must ensure that their research paper is original and has not been previously submitted to any other journal or conference. The similarity score of the manuscript should not exceed 10%. Manuscripts with a similarity score of more than 10% will not be processed. Submissions found to contain AI-generated plagiarism or unethical use of AI tools will not be considered for review.",
-				"Papers will undergo a double-blind peer review process. Authors must ensure that their manuscripts do not contain any identifying information.",
-				"Submissions must be made through the Microsoft CMT system.",
+				"To submit a paper for ICAIES³ 2026, authors must follow the conference proceedings format.",
+				"The submission template for the conference is available at ICAIES³ Submission Template, for Word users and for LaTeX users.",
+				"The maximum length of the paper is six (6) pages.",
+				"Authors must ensure that their research paper is original and has not been previously submitted to any other journal or conference.",
 			],
 		},
 		{
-			title: "Templates & Formatting",
+			title: "Plagiarism & AI Policy",
 			content: [
-				"Papers must be formatted according to the conference submission template provided on the website.",
-				"The maximum length of the paper is six (6) pages, including references and appendices.",
-				"All papers must be submitted in PDF format.",
+				"The similarity score of the manuscript should not exceed 10%.",
+				"Manuscripts with a similarity score of more than 10% will not be processed.",
+				"Submissions found to contain AI-generated plagiarism or unethical use of AI tools will not be considered for review.",
 			],
 		},
 		{
 			title: "Review Process & Oral Presentation",
 			content: [
-				"All papers with a similarity score of less than 10% will undergo a double-blind review. The technical committee of the conference will review the papers, and the authors will be notified of the paper's status, which can be one of the following:",
-				"Accepted for oral presentation",
-				"Accepted with minor corrections for Oral Presentation",
-				"Rejected",
+				"All papers with a similarity score of less than 10% will undergo a double-blind review.",
+				"The technical committee of the conference will review the papers, and the authors will be notified of the paper's status, which can be one of the following:",
+				"• Accepted for oral presentation",
+				"• Accepted with minor corrections for Oral Presentation",
+				"• Rejected",
 			],
 		},
 		{
-			title: "Publication Opportunities",
+			title: "Paper Submission Portal",
 			content: [
-				"No APC (Free): Accepted papers will be published in Conference Proceedings (Edited Book with ISBN/DOI). Selected extended papers will be considered for publication in Scopus Indexed Books.",
-				"Journal Publication with APC: High-quality papers will be recommended to Scopus/Web of Science Indexed Journals (APC Applicable).",
+				"Authors are required to submit their manuscripts electronically through the Microsoft Conference Management Toolkit (CMT) portal.",
+				"Follow the official submission link on the website to create or log in to your Microsoft CMT account.",
 			],
 		},
 		{
-			title: "Author Compliance",
+			title: "Publication without Article Processing Charge (APC)",
 			content: [
-				"At least one author of each accepted paper must register for the conference.",
-				"Authors must submit the signed copyright/consent form along with the camera-ready version.",
-				"Camera-ready papers must address all reviewer comments.",
+				"1. All Accepted Full-Length Papers will be Recommended for Publication in the conference proceedings as an edited book with ISBN and DOI, without APC.",
+				"2. Selected extended papers will be recommended as a chapter and will go for publication in Scopus Indexed Edited Book without APC. (Subject to acceptance - as per Scope of Edited Book).",
+			],
+		},
+		{
+			title: "Publication with Article Processing Charge (APC)",
+			content: [
+				"3. High Quality selected papers will be sent for publication in ESCI & Scopus indexed Journal(s) will be published on the terms & conditions of the respective journals.",
+				"The cost of publication shall be borne by the author(s) separately.",
+				"Articles submitted to journals may go through a secondary peer review per journal requirements.",
+				"Acceptance is solely at the discretion of the Journal editors.",
+			],
+		},
+		{
+			title: "Registration & Author Compliance",
+			content: [
+				"All the accepted paper(s) need to be registered by at least one of the authors(s) to make a presentation at the conference.",
+				"The paper without registration will not appear in the publication.",
+				"The Fee is also transferable into our accounts through NEFT/RTGS. The details of the account will be provided on request of the same.",
+				"Only full-time Research Scholars can register under the Research Scholar category.",
+				"Authors will be asked to submit the Proof of UG/PG/Research Scholar to confirm the Category of Registration.",
 			],
 		},
 		{
 			title: "Presentation Mode",
 			content: [
-				"The conference supports both online and offline presentation modes (Hybrid).",
-				"Presenters will receive a certificate of presentation.",
-				"All presented papers will be included in the conference proceedings.",
+				"The conference will be held in Hybrid Mode (both Online and Offline options).",
+				"Authors can present their accepted work either physically at Amity University Patna or virtually via online conference links.",
 			],
 		},
 	] as SubmissionSection[],

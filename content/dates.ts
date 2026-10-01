@@ -6,28 +6,28 @@ export interface ImportantDate {
 
 export const importantDates: ImportantDate[] = [
 	{
-		date: "July 20, 2026",
+		date: "September 15, 2026",
 		label: "Paper Submission Opens",
 	},
 	{
-		date: "September 30, 2026",
+		date: "November 15, 2026",
 		label: "Paper Submission Close",
 	},
 	{
-		date: "October 20, 2026",
+		date: "November 25, 2026",
 		label: "Paper Acceptance Notification",
 	},
 	{
-		date: "October 30, 2026",
+		date: "November 30, 2026",
 		label: "Registration Deadline & Camera-Ready Submission",
 	},
 	{
-		date: "November 19-20, 2026",
+		date: "December 03-04, 2026",
 		label: "Conference Dates",
 	},
 ];
 
-export const conferenceDateISO = "2026-11-19T09:00:00+05:30";
+export const conferenceDateISO = "2026-12-03T09:00:00+05:30";
 
 export const announcements: string[] = [
 	"Best Paper Award Will be Given for Each Track.",

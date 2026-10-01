@@ -17,6 +17,7 @@ const roleIcons: Record<string, React.ReactNode> = {
   advisory: <BookOpen className="w-5 h-5 text-accent" />,
   "conference-chair": <Bookmark className="w-5 h-5 text-accent" />,
   convenor: <Award className="w-5 h-5 text-accent" />,
+  "conference-executive-chair": <Award className="w-5 h-5 text-accent" />,
   "co-convenor": <Award className="w-5 h-5 text-accent" />,
   member: <User className="w-5 h-5 text-accent" />,
 };
@@ -42,7 +43,7 @@ export default function OrganizingCommitteePage() {
                 <h3 className="text-lg font-bold text-primary">{label}</h3>
                 <div className="flex-1 h-px bg-gray-200 ml-3" />
               </div>
-              <div className={`grid gap-4 ${role === "member" ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" : role === "convenor" || role === "co-convenor" || role === "advisory" ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-1 max-w-lg"}`}>
+              <div className={`grid gap-4 ${role === "member" || role === "conference-executive-chair" ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" : role === "convenor" || role === "co-convenor" || role === "advisory" ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-1 max-w-lg"}`}>
                 {members.map((member) => (
                   <div key={member.name + member.role} className={`bg-white border border-gray-100 rounded-xl p-5 shadow-sm card-hover ${role === "chief-patron" || role === "patron" || role === "conference-chair" ? "border-l-4 border-l-accent" : ""}`}>
                     <div className="flex items-start gap-3">

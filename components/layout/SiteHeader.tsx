@@ -8,7 +8,7 @@ export function SiteHeader({ isHome = false }: { isHome?: boolean }) {
 			{/* Background Image */}
 			<div className="absolute inset-0 z-0">
 				<Image
-					src="/images/Amity-University-Patna.webp"
+					src="/images/campus-hero.jpg"
 					alt="Amity University Patna Campus"
 					fill
 					className="object-cover object-center"
@@ -62,6 +62,10 @@ export function SiteHeader({ isHome = false }: { isHome?: boolean }) {
 								className="h-8 w-auto object-contain"
 							/>
 						</div>
+						{/* <div className="hidden lg:flex flex-col items-center justify-center bg-white/10 rounded-lg px-3 py-1.5 border border-white/20 text-white text-center">
+							<span className="text-xs font-semibold tracking-wide">Bihar Regiment Centre</span>
+							<span className="text-[10px] text-accent tracking-wider uppercase font-medium">Danapur</span>
+						</div> */}
 					</div>
 				</div>
 
@@ -71,19 +75,19 @@ export function SiteHeader({ isHome = false }: { isHome?: boolean }) {
 						{siteMeta.acronym} {siteMeta.year}
 					</p>
 					{isHome ? (
-						<h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-[3.4rem] text-white font-bold leading-tight tracking-tight">
+						<h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-[3.2rem] text-white font-bold leading-tight tracking-tight">
 							<span className="block">
 								Advances in <span className="text-accent">AI-Enabled</span>
 							</span>
-							<span className="block mt-1">Intelligent &amp; Secure</span>
+							<span className="block mt-1">Intelligent, Secure &amp; Scalable</span>
 							<span className="block mt-1">Systems</span>
 						</h1>
 					) : (
-						<p className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-[3.4rem] text-white font-bold leading-tight tracking-tight">
+						<p className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-[3.2rem] text-white font-bold leading-tight tracking-tight">
 							<span className="block">
 								Advances in <span className="text-accent">AI-Enabled</span>
 							</span>
-							<span className="block mt-1">Intelligent &amp; Secure</span>
+							<span className="block mt-1">Intelligent, Secure &amp; Scalable</span>
 							<span className="block mt-1">Systems</span>
 						</p>
 					)}

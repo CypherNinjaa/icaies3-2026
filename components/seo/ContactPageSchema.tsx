@@ -10,7 +10,7 @@ export function ContactPageSchema() {
 			"@type": "EducationalOrganization",
 			name: "Amity University Patna",
 			telephone: "+91-9430800553",
-			email: "icaies3@amity.edu",
+			email: "conference.aiit@ptn.amity.edu",
 		},
 	};
 

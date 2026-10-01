@@ -1,3 +1,10 @@
+export interface ContactPerson {
+	name: string;
+	role: string;
+	phone: string;
+	affiliation: string;
+}
+
 export const contactInfo = {
 	title: "Contact",
 	address: {
@@ -5,9 +12,24 @@ export const contactInfo = {
 		line2: "Amity University Patna",
 		line3: "Bailey Road, Patna, Bihar, India",
 		pincode: "801503",
+		landmark: "Transit Campuses (Old and New) — 15 mins drive from Patna Airport, 25 mins from Patna Railway Station",
 	},
-	contactPersons: [],
-	email: "icaies3@amity.edu",
+	contactPersons: [
+		{
+			name: "Dr. Arvind Kumar Mishra",
+			role: "Convenor",
+			phone: "7906770253",
+			affiliation: "Associate Professor, AIIT, Amity University Patna",
+		},
+		{
+			name: "Dr. Upasana",
+			role: "Convenor",
+			phone: "9451961800",
+			affiliation: "Assistant Professor, AIIT, Amity University Patna",
+		},
+	] as ContactPerson[],
+	email: "conference.aiit@ptn.amity.edu",
+	secondaryEmail: "aiit@ptn.amity.edu",
 	mapEmbedUrl:
 		"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.5!2d85.1!3d25.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAmity%20University%20Patna!5e0!3m2!1sen!2sin!4v1",
 	mapCoordinates: {

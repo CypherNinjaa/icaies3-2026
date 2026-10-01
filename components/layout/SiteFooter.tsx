@@ -70,14 +70,27 @@ export function SiteFooter() {
 						<p className="text-sm text-gray-400 leading-relaxed mb-4">
 							For any queries, please contact the organizing committee:
 						</p>
-						<div className="flex items-center gap-2 text-sm text-gray-400">
-							<Mail className="w-3.5 h-3.5 text-accent" />
-							<a
-								href={`mailto:${contactInfo.email}`}
-								className="hover:text-accent transition-colors underline underline-offset-2"
-							>
-								{contactInfo.email}
-							</a>
+						<div className="flex items-start gap-2 text-sm text-gray-400">
+							<Mail className="w-3.5 h-3.5 text-accent shrink-0 mt-1" />
+							<div className="flex flex-wrap items-center gap-x-1">
+								<a
+									href={`mailto:${contactInfo.email}`}
+									className="hover:text-accent transition-colors underline underline-offset-2 break-all"
+								>
+									{contactInfo.email}
+								</a>
+								{contactInfo.secondaryEmail && (
+									<>
+										<span>,</span>
+										<a
+											href={`mailto:${contactInfo.secondaryEmail}`}
+											className="hover:text-accent transition-colors underline underline-offset-2 break-all"
+										>
+											{contactInfo.secondaryEmail}
+										</a>
+									</>
+								)}
+							</div>
 						</div>
 					</div>
 				</div>
@@ -86,8 +99,8 @@ export function SiteFooter() {
 				<div className="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
 					<div className="space-y-1 text-xs text-gray-400">
 						<p>
-							© {new Date().getFullYear()} {siteMeta.acronym} Conference. All
-							Rights Reserved. Not an official University page.
+							© {new Date().getFullYear()} Amity University Patna. All
+							Rights Reserved.
 						</p>
 						<p className="text-gray-500">
 							Designed &amp; Developed by{" "}

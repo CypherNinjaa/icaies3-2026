@@ -1,8 +1,19 @@
 import { Metadata } from "next";
 import { PageTitle } from "@/components/layout/PageTitle";
-import { importantDates } from "@/content/dates";
 import Link from "next/link";
-import { Calendar, CheckCircle2, FileText, LayoutTemplate, Printer, Users, Sparkles, Mail } from "lucide-react";
+import {
+	Calendar,
+	CheckCircle2,
+	FileText,
+	LayoutTemplate,
+	Printer,
+	Users,
+	Sparkles,
+	Mail,
+	Phone,
+	QrCode,
+	CreditCard,
+} from "lucide-react";
 import { contactInfo } from "@/content/contact";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
@@ -10,8 +21,15 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 export const metadata: Metadata = {
 	title: "Call for Poster Presentation",
 	description:
-		"Showcase your research and engage with international experts at ICAIES³ 2026. Review guidelines, format, and important dates for poster submissions.",
+		"Showcase your research and engage with international experts at ICAIES³ 2026. Review poster presentation guidelines, dimensions, registration fee, and submission deadlines.",
 };
+
+const posterDates = [
+	{ label: "Poster Submission Deadline", date: "November 15, 2026" },
+	{ label: "Notification of Acceptance", date: "November 25, 2026" },
+	{ label: "Registration & Camera-Ready", date: "November 30, 2026" },
+	{ label: "Conference Dates", date: "December 03-04, 2026" },
+];
 
 const guidelines = [
 	{
@@ -27,7 +45,7 @@ const guidelines = [
 		icon: <FileText className="w-5 h-5 text-accent" />,
 		points: [
 			"Title: The title should be at the top of the poster in large, bold font (suggested size: 72 pt). Include the full title of your research or project.",
-			"Authors: List the names of all authors, along with their affiliations. The presenting author's name should be highlighted.",
+			"Authors: List the names of all authors, along with their affiliations. The presenting author’s name should be highlighted.",
 		],
 	},
 	{
@@ -35,9 +53,9 @@ const guidelines = [
 		icon: <CheckCircle2 className="w-5 h-5 text-accent" />,
 		points: [
 			"Font Size: Title: 72 pt (or larger), Section Headers: 36 pt, Body Text: 24 pt, Captions: 18-20 pt.",
-			"Color Scheme: Use a consistent, professional color scheme. Ensure contrast.",
-			"Images: Use high-resolution images (minimum 300 dpi). Clearly label charts.",
-			"Avoid overcrowding; use bullet points and white space to ensure readability.",
+			"Color Scheme: Use a consistent, professional color scheme with sufficient contrast.",
+			"Images & Graphics: High-resolution images (minimum 300 dpi); charts and graphs clearly labeled with legends and axes.",
+			"White Space: Avoid overcrowding; use bullet points and leave adequate white space to ensure readability.",
 		],
 	},
 	{
@@ -53,8 +71,17 @@ const guidelines = [
 		icon: <Users className="w-5 h-5 text-accent" />,
 		points: [
 			"Setup Time: Posters should be set up by 10:00 AM on the day of the presentation.",
-			"Presentation: Presenters can present in offline or online mode.",
-			"Maximum two candidates can participate in one poster, and one candidate can only present one poster.",
+			"Location: The poster presentation area will be clearly marked at the conference venue.",
+			"Presentation Mode: Presenters can present their poster in offline or online mode. They should be available to discuss their posters during designated session times.",
+			"Participation Rule: Maximum two candidates can participate in one poster, and one candidate can only present one poster.",
+		],
+	},
+	{
+		title: "Important Notes",
+		icon: <QrCode className="w-5 h-5 text-accent" />,
+		points: [
+			"QR Codes: Optional but encouraged. QR codes can link to additional resources, full papers, or contact information.",
+			"Handouts: Presenters may bring handouts summarizing the poster's content to place near the poster for attendees.",
 		],
 	},
 ];
@@ -75,17 +102,17 @@ export default function CallForPosterPage() {
 				<PageTitle
 					lightText="Call for"
 					accentText="Poster Presentation"
-					description="Showcase your research, engage with international experts, and contribute to discussions shaping the future of science and engineering."
+					description="Showcase your research, engage with international experts, and contribute to discussions shaping the future of AI-enabled intelligent, secure, and scalable systems."
 				/>
 
 				{/* Intro Section */}
 				<div className="max-w-4xl mb-12 mt-4">
 					<p className="text-text-body text-base md:text-lg leading-relaxed mb-6">
-						The International Conference on Advances in AI-Enabled Intelligent, Secure and Scalable Systems (ICAIES³ 2026) invites researchers, academicians, and students to present their work through Poster Presentations.
+						The International Conference on Advances in AI-Enabled Intelligent, Secure and Scalable Systems (ICAIES³ 2026) invites researchers, academicians, and students to present their work through Poster Presentations. This is a unique opportunity to showcase your research, engage with international experts, and contribute to discussions shaping the future of science and engineering.
 					</p>
 					<div className="bg-accent/5 border-l-4 border-accent p-6 rounded-r-xl">
 						<p className="text-primary font-medium">
-							Selected posters will be displayed during the conference, providing valuable exposure and networking opportunities. Additionally, the abstracts of all selected posters will be published in the Conference Abstract Book.
+							Selected posters will be displayed during the conference, providing valuable exposure and networking opportunities. Additionally, the abstracts of all selected posters will be published in the Conference Abstract Book, offering lasting recognition for your contribution.
 						</p>
 					</div>
 				</div>
@@ -94,19 +121,17 @@ export default function CallForPosterPage() {
 				<div className="mb-14">
 					<h2 className="text-2xl font-bold text-primary mb-8 flex items-center gap-2">
 						<Calendar className="w-6 h-6 text-accent" />
-						Important Dates
+						Important Dates for Poster Presentation
 					</h2>
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-						{importantDates
-							.filter((d) => d.label !== "Conference Dates")
-							.map((date, index) => (
-								<div key={index} className="bg-bg-cream rounded-xl p-5 border border-gray-100">
-									<p className="text-sm text-text-muted font-medium mb-1">
-										{date.label}
-									</p>
-									<p className="text-lg font-bold text-primary">{date.date}</p>
-								</div>
-							))}
+						{posterDates.map((item, index) => (
+							<div key={index} className="bg-bg-cream rounded-xl p-5 border border-gray-100">
+								<p className="text-sm text-text-muted font-medium mb-1">
+									{item.label}
+								</p>
+								<p className="text-lg font-bold text-primary">{item.date}</p>
+							</div>
+						))}
 					</div>
 				</div>
 
@@ -135,6 +160,56 @@ export default function CallForPosterPage() {
 					</div>
 				</div>
 
+				{/* Registration Fee for Poster Presentation */}
+				<div className="mb-14">
+					<h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2">
+						<CreditCard className="w-6 h-6 text-accent" />
+						Registration Fee (Poster Presentation)
+					</h2>
+					<div className="overflow-x-auto rounded-xl border border-gray-100 shadow-sm">
+						<table className="w-full text-sm">
+							<thead>
+								<tr className="bg-primary text-white">
+									<th className="text-left px-4 py-4 font-semibold min-w-56">
+										Poster Presentation Fee
+									</th>
+									<th className="text-center px-4 py-4 font-semibold">
+										Students (INR)
+									</th>
+									<th className="text-center px-4 py-4 font-semibold">
+										Research Scholar (INR)
+									</th>
+									<th className="text-center px-4 py-4 font-semibold">
+										Faculties (INR)
+									</th>
+									<th className="text-center px-4 py-4 font-semibold">
+										Industry &amp; Other Participants (INR)
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr className="border-b border-gray-100 bg-white">
+									<td className="px-4 py-4 font-medium text-primary">
+										Amount (Hybrid Mode)
+									</td>
+									<td className="px-4 py-4 text-center font-bold text-primary">
+										₹300
+									</td>
+									<td className="px-4 py-4 text-center font-bold text-primary">
+										₹500
+									</td>
+									<td className="px-4 py-4 text-center font-bold text-primary">
+										₹750
+									</td>
+									<td className="px-4 py-4 text-center font-bold text-primary">
+										₹1,000
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
 					{/* Evaluation Criteria */}
 					<div className="bg-gradient-to-br from-primary to-primary-dark rounded-xl p-8 text-white">
@@ -156,29 +231,70 @@ export default function CallForPosterPage() {
 
 					{/* Contact Information */}
 					<div className="bg-bg-cream rounded-xl p-8 border border-gray-100">
-						<h3 className="text-xl font-bold text-primary mb-4">Contact Information</h3>
-						<p className="text-sm text-text-body mb-4">
-							For any queries related to the poster presentations, please contact the organizing committee:
+						<h3 className="text-xl font-bold text-primary mb-3">Contact Information</h3>
+						<p className="text-sm text-text-body mb-5">
+							For any queries related to poster presentations, please contact the organizing committee:
 						</p>
-						<div className="flex items-center gap-2">
-							<Mail className="w-5 h-5 text-accent-contrast shrink-0" />
-							<a
-								href={`mailto:${contactInfo.email}`}
-								className="text-base font-bold text-primary hover:text-accent transition-colors underline underline-offset-4"
-							>
-								{contactInfo.email}
-							</a>
+						<div className="space-y-3">
+							<div className="flex items-center justify-between p-3 bg-white rounded-lg border border-gray-100">
+								<div>
+									<p className="text-sm font-bold text-primary">Dr. Arvind Kumar Mishra</p>
+									<p className="text-xs text-text-muted">Convenor, AIIT</p>
+								</div>
+								<a
+									href="tel:7906770253"
+									className="text-sm font-bold font-mono text-primary hover:text-accent transition-colors flex items-center gap-1.5"
+								>
+									<Phone className="w-3.5 h-3.5 text-accent" />
+									7906770253
+								</a>
+							</div>
+							<div className="flex items-center justify-between p-3 bg-white rounded-lg border border-gray-100">
+								<div>
+									<p className="text-sm font-bold text-primary">Dr. Upasana</p>
+									<p className="text-xs text-text-muted">Convenor, AIIT</p>
+								</div>
+								<a
+									href="tel:9451961800"
+									className="text-sm font-bold font-mono text-primary hover:text-accent transition-colors flex items-center gap-1.5"
+								>
+									<Phone className="w-3.5 h-3.5 text-accent" />
+									9451961800
+								</a>
+							</div>
+							<div className="pt-2 flex items-start gap-2">
+								<Mail className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+								<div className="flex flex-wrap items-center gap-x-1 text-sm font-semibold text-primary">
+									<a
+										href={`mailto:${contactInfo.email}`}
+										className="hover:text-accent transition-colors underline underline-offset-2 break-all"
+									>
+										{contactInfo.email}
+									</a>
+									{contactInfo.secondaryEmail && (
+										<>
+											<span className="font-normal text-text-muted">,</span>
+											<a
+												href={`mailto:${contactInfo.secondaryEmail}`}
+												className="hover:text-accent transition-colors underline underline-offset-2 break-all"
+											>
+												{contactInfo.secondaryEmail}
+											</a>
+										</>
+									)}
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 
-                {/* CTA */}
+				{/* CTA */}
 				<div className="text-center mt-12 pb-4">
 					<Link
 						href="/registration"
 						className="btn-gradient text-base"
 					>
-						Register Now →
+						View Registration Guidelines →
 					</Link>
 				</div>
 			</div>

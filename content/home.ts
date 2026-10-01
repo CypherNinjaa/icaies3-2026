@@ -15,14 +15,14 @@ export const homeContent = {
 	aboutInstitution: {
 		title: "About Amity University Patna",
 		description:
-			"Amity University Patna, part of the 25-year-old renowned Amity Education Group, was established with a vision to contribute to nation-building through education, where more than 200,000 students are pursuing 400 programmes across campuses in India and abroad.",
+			"Amity University Patna, part of the 25-year-old renowned Amity Education Group, was set up with a vision to contribute to nation-building through education, where currently 200,000+ students are pursuing 400 programmes across campuses in India and abroad. Amity University Patna is yet another landmark project by Amity Education Group to revolutionize the Indian higher education sector by providing globally benchmarked, research and employment-oriented education.",
 		aboutAIIT:
-			"Amity Institute of Information Technology (AIIT) embodies the philosophy of Founder President Dr. Ashok K. Chauhan, centered on total education that combines academic excellence, character building, and talent nurturing. AIIT offers undergraduate, postgraduate, and research programs in Information Technology, supported by strong values, experienced faculty, and modern infrastructure to foster innovation, responsibility, and nation-building.",
+			"Amity Institute of Information Technology (AIIT) is a prestigious institute that embodies the philosophy of Founder President Dr. Ashok K. Chauhan. AIIT aligns with this philosophy by offering undergraduate, postgraduate, and Research programs in Information Technology that impart technical knowledge while instilling values and ethics essential for holistic development. AIIT aims to produce graduates who are technically proficient, socially responsible, and committed to nation-building.",
 		bulletPoints: [
-			"Part of the 25-year-old Amity Education Group with 200,000+ students worldwide",
-			"400 programmes offered across campuses in India and abroad",
-			"Globally benchmarked, research-oriented and employment-oriented education",
-			"UG and PG programmes including MBA, MCA, B.Tech, BBA, BCA, B.Com and BA disciplines",
+			"Part of the 25-year-old Amity Education Group with 200,000+ students pursuing 400 programmes worldwide",
+			"Offers UG & PG programmes: MBA, MCA, B.Tech, BBA, BCA, B.Com, BA (English, Psychology, Administration, BJMC)",
+			"Conveniently located at Bailey Road Patna (Transit campuses Old & New) — 15 mins from Patna Airport, 25 mins from Patna Railway Station",
+			"State-of-the-art infrastructure, experienced faculty, and innovative teaching methodologies at AIIT",
 		],
 		images: [
 			{

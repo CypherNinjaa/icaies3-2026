@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { PageTitle } from "@/components/layout/PageTitle";
 import { contactInfo } from "@/content/contact";
-import { MapPin, Mail, ExternalLink } from "lucide-react";
+import { MapPin, Mail, ExternalLink, Phone, Navigation } from "lucide-react";
 import Link from "next/link";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
@@ -10,7 +10,7 @@ import { ContactPageSchema } from "@/components/seo/ContactPageSchema";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact the ICAIES³ 2026 organizing committee. Address, phone, and email information.",
+    "Contact the ICAIES³ 2026 organizing committee. Address, phone, and email information for conference convenors.",
 };
 
 const MAPS_EMBED_URL =
@@ -28,47 +28,96 @@ export default function ContactPage() {
         <PageTitle
           lightText=""
           accentText="Contact"
-          description="Get in touch with the ICAIES³ 2026 organizing committee for any queries."
+          description="Get in touch with the ICAIES³ 2026 organizing committee for paper submissions, registrations, or general inquiries."
         />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8">
           {/* Contact Info */}
           <div className="space-y-5">
-            {/* Address */}
+            {/* Contact Persons */}
+            <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-accent/10 text-accent">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-primary">Convenors &amp; Organizing Contacts</h3>
+                  <p className="text-xs text-text-muted">Direct contact for conference and poster queries</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
+                {contactInfo.contactPersons.map((person, idx) => (
+                  <div key={idx} className="bg-bg-cream/60 rounded-xl p-4 border border-gray-100">
+                    <p className="font-bold text-primary text-sm">{person.name}</p>
+                    <p className="text-xs text-text-muted mt-0.5">{person.affiliation}</p>
+                    <p className="text-xs font-semibold text-accent-contrast mt-1">{person.role}</p>
+                    <a
+                      href={`tel:${person.phone}`}
+                      className="inline-flex items-center gap-2 mt-3 font-mono text-sm font-bold text-primary hover:text-accent transition-colors"
+                    >
+                      <Phone className="w-3.5 h-3.5 text-accent" />
+                      {person.phone}
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Email Contact */}
+            <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-accent/10 text-accent shrink-0">
+                  <Mail className="w-5 h-5" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-primary mb-1">
+                    Official Email
+                  </h3>
+                  <p className="text-sm text-text-body leading-relaxed mb-3">
+                    For paper submissions, registration queries, and sponsorship requests:
+                  </p>
+                  <div className="flex flex-wrap items-center gap-x-1 text-base font-bold text-primary">
+                    <a
+                      href={`mailto:${contactInfo.email}`}
+                      className="hover:text-accent transition-colors underline underline-offset-4 break-all"
+                    >
+                      {contactInfo.email}
+                    </a>
+                    {contactInfo.secondaryEmail && (
+                      <>
+                        <span className="font-normal text-text-muted">,</span>
+                        <a
+                          href={`mailto:${contactInfo.secondaryEmail}`}
+                          className="hover:text-accent transition-colors underline underline-offset-4 break-all"
+                        >
+                          {contactInfo.secondaryEmail}
+                        </a>
+                      </>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Address & Campus Transit Details */}
             <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-3">
                 <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-accent/10 text-accent">
                   <MapPin className="w-5 h-5" />
                 </div>
-                <h3 className="text-lg font-bold text-primary">Address</h3>
+                <h3 className="text-lg font-bold text-primary">Venue &amp; Address</h3>
               </div>
-              <div className="text-sm text-text-body leading-relaxed ml-[52px]">
-                <p>{contactInfo.address.line1}</p>
+              <div className="text-sm text-text-body leading-relaxed ml-[52px] space-y-1">
+                <p className="font-semibold text-primary">{contactInfo.address.line1}</p>
                 <p>{contactInfo.address.line2}</p>
                 <p>
                   {contactInfo.address.line3} - {contactInfo.address.pincode}
                 </p>
-              </div>
-            </div>
-
-            {/* Contact Information */}
-            <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-start gap-4">
-                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-accent/10 text-accent shrink-0">
-                  <Mail className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-primary mb-2">
-                    Contact Information
-                  </h3>
-                  <p className="text-sm text-text-body leading-relaxed mb-4">
-                    For any queries, please contact the organizing committee:
-                  </p>
-                  <a
-                    href={`mailto:${contactInfo.email}`}
-                    className="inline-flex items-center text-base font-bold text-primary hover:text-accent transition-colors underline underline-offset-4"
-                  >
-                    {contactInfo.email}
-                  </a>
+                <div className="mt-3 pt-3 border-t border-gray-100 flex items-start gap-2 text-xs text-text-muted">
+                  <Navigation className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                  <span>
+                    Transit campuses (Old and New) are a 15 minutes&apos; drive from Patna Airport and 25 minutes from Patna Railway Station.
+                  </span>
                 </div>
               </div>
             </div>
@@ -79,7 +128,7 @@ export default function ContactPage() {
             {/* Map Container with premium frame */}
             <div className="relative rounded-2xl overflow-hidden border-2 border-gray-100 shadow-lg group">
               {/* Map Header Bar */}
-              <div className="bg-gradient-to-r from-primary to-primary-light px-5 py-3 flex items-center justify-between">
+              <div className="bg-linear-to-r from-primary to-primary-light px-5 py-3 flex items-center justify-between">
                 <div className="flex items-center gap-2 text-white">
                   <MapPin className="w-4 h-4 text-accent" />
                   <span className="text-sm font-semibold">

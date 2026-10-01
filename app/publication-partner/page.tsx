@@ -1,153 +1,139 @@
 import { Metadata } from "next";
 import { PageTitle } from "@/components/layout/PageTitle";
-import { Globe } from "lucide-react";
+import { BookOpen, CheckCircle2, Globe, AlertCircle, FileCheck, Sparkles } from "lucide-react";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-	title: "Publication Partners",
+	title: "Publication Opportunities",
 	description:
-		"Discover publication opportunities for accepted papers at ICAIES³ 2026, including Scopus and WoS indexed journals and conference proceedings.",
+		"Explore the publication opportunities for accepted papers at ICAIES³ 2026, including conference proceedings with ISBN and DOI, Scopus indexed edited books, and ESCI/Scopus indexed journals.",
 };
 
-/*
 const publicationsWithoutAPC = [
 	"All Accepted Full-Length Papers will be Recommended for Publication in the conference proceedings as an edited book with ISBN and DOI, without APC.",
 	"Selected extended papers will be recommended as a chapter and will go for publication in Scopus Indexed Edited Book without APC. (Subject to acceptance - as per Scope of Edited Book).",
-	// "Through approved Publisher (Applying in Taylor & Francis & AIP)",
 ];
 
-type PublicationJournal = {
-	title: string;
-	indexing: string;
-	status: "Approved" | "Approval Pending";
-};
-
-const publicationsWithAPC: PublicationJournal[] = [
-	{
-		title: "Journal of Discrete Mathematical Sciences & Cryptography",
-		indexing: "Scopus Q1, WoS Q2",
-		status: "Approved",
-	},
-	{
-		title: "Journal of Information and Optimization Sciences",
-		indexing: "WoS- Q3",
-		status: "Approved",
-	},
-	{
-		title: "Journal of Advance Science & Technology (JASTT)",
-		indexing: "Scopus-Q3",
-		status: "Approval Pending",
-	},
-	{
-		title: "Journal of Computers, Mechanical Management (JCMM)",
-		indexing: "Scopus",
-		status: "Approval Pending",
-	},
+const publicationsWithAPCGuidelines = [
+	"High Quality selected papers will be sent for publication in ESCI & Scopus indexed Journal(s) will be published on the terms & conditions of the respective journals.",
+	"The cost of publication shall be borne by the author(s) separately.",
+	"Articles submitted to journals may go through a secondary peer review per journal requirements.",
+	"Acceptance is solely at the discretion of the Journal editors.",
 ];
-*/
 
 export default function PublicationPartnerPage() {
 	return (
 		<div className="bg-white">
 			<SiteHeader />
-			<BreadcrumbSchema pageName="Publication Partners" route="/publication-partner" />
+			<BreadcrumbSchema pageName="Publication Opportunities" route="/publication-partner" />
 			<div className="mx-auto max-w-7xl px-6 lg:px-12 pb-10 lg:pb-14 pt-4 lg:pt-6">
 				<PageTitle
 					lightText="Publication"
-					accentText="Partners"
-					description="Explore the publication avenues available for accepted and presented papers at ICAIES³ 2026."
+					accentText="Opportunities"
+					description="Explore the official publication avenues available for accepted and presented papers at ICAIES³ 2026."
 				/>
 
-				{/* Coming Soon State */}
-				<div className="max-w-2xl mx-auto mt-12 text-center py-12">
-					<div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-accent/10 mb-6">
-						<Globe className="w-12 h-12 text-accent" />
+				{/* Two-column Publication Structure */}
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10">
+					{/* Category 1: Without APC */}
+					<div className="bg-bg-cream rounded-2xl p-8 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+						<div>
+							<div className="flex items-center gap-3 mb-6">
+								<div className="p-3 bg-white rounded-xl shadow-sm text-accent">
+									<BookOpen className="w-6 h-6" />
+								</div>
+								<div>
+									<span className="text-xs uppercase font-bold tracking-wider text-green-700 bg-green-100 px-2.5 py-0.5 rounded-full inline-block mb-1">
+										Zero APC
+									</span>
+									<h2 className="text-xl font-bold text-primary">
+										Publication without APC
+									</h2>
+								</div>
+							</div>
+
+							<p className="text-sm text-text-muted mb-6 leading-relaxed">
+								Accepted and registered full-length papers enjoy publication avenues without any article processing fees:
+							</p>
+
+							<ul className="space-y-4">
+								{publicationsWithoutAPC.map((item, idx) => (
+									<li key={idx} className="flex items-start gap-3 bg-white/70 rounded-xl p-4 border border-gray-100/80">
+										<CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+										<p className="text-text-body text-sm leading-relaxed font-medium">
+											{item}
+										</p>
+									</li>
+								))}
+							</ul>
+						</div>
+
+						<div className="mt-8 pt-6 border-t border-gray-200/60 flex items-center gap-2 text-xs text-text-muted">
+							<FileCheck className="w-4 h-4 text-accent shrink-0" />
+							<span>Proceedings will be assigned official ISBN and DOI metadata.</span>
+						</div>
 					</div>
-					<h3 className="text-2xl font-serif font-bold text-primary mb-3">
-						Will be updated Soon
-					</h3>
-					<p className="text-text-body leading-relaxed max-w-lg mx-auto">
-						We are currently finalizing details with our publication partners and Scopus/ESCI indexed journals. 
-						Please check back soon for the complete list of publishing avenues for ICAIES³ 2026.
+
+					{/* Category 2: With APC */}
+					<div className="bg-white rounded-2xl p-8 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+						<div className="absolute top-0 right-0 w-36 h-36 bg-accent/5 rounded-bl-full -z-10" />
+
+						<div>
+							<div className="flex items-center gap-3 mb-6">
+								<div className="p-3 bg-accent/10 rounded-xl shadow-sm text-accent">
+									<Globe className="w-6 h-6" />
+								</div>
+								<div>
+									<span className="text-xs uppercase font-bold tracking-wider text-accent-contrast bg-accent/10 px-2.5 py-0.5 rounded-full inline-block mb-1">
+										Journal Indexing
+									</span>
+									<h2 className="text-xl font-bold text-primary">
+										Publications with APC
+									</h2>
+								</div>
+							</div>
+
+							<p className="text-sm text-text-muted mb-6 leading-relaxed">
+								High-quality selected papers will be recommended for publication in ESCI &amp; Scopus indexed partner journals:
+							</p>
+
+							<ul className="space-y-3.5">
+								{publicationsWithAPCGuidelines.map((item, idx) => (
+									<li key={idx} className="flex items-start gap-3 bg-bg-cream/40 rounded-xl p-4 border border-gray-100">
+										<Sparkles className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+										<p className="text-text-body text-sm leading-relaxed">
+											{item}
+										</p>
+									</li>
+								))}
+							</ul>
+						</div>
+
+						<div className="mt-8 pt-6 border-t border-gray-100 flex items-start gap-2.5 bg-amber-50/70 p-3.5 rounded-xl border border-amber-200/60">
+							<AlertCircle className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
+							<p className="text-xs text-amber-900 leading-snug font-medium">
+								Note: Acceptance in ESCI &amp; Scopus indexed journals is solely at the discretion of the Journal editors following secondary peer review.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				{/* Submission CTA */}
+				<div className="text-center mt-14 pb-4">
+					<Link
+						href="https://cmt3.research.microsoft.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="btn-gradient text-base"
+					>
+						Submit Paper via Microsoft CMT →
+					</Link>
+					<p className="text-sm text-text-muted mt-3">
+						Review submission guidelines before uploading your manuscript
 					</p>
 				</div>
-
-				{/* 
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8">
-					<div className="bg-bg-cream rounded-xl p-8 border border-gray-100 h-full">
-						<div className="flex items-center gap-3 mb-6">
-							<div className="p-3 bg-white rounded-xl shadow-sm">
-								<BookOpen className="w-6 h-6 text-accent" />
-							</div>
-							<h2 className="text-xl font-bold text-primary">
-								Publication <span className="text-accent-contrast">without</span> APC
-							</h2>
-						</div>
-						<ul className="space-y-5">
-							{publicationsWithoutAPC.map((item, idx) => (
-								<li key={idx} className="flex items-start gap-3">
-									<div className="mt-1">
-										<CheckCircle2 className="w-5 h-5 text-accent" />
-									</div>
-									<p className="text-text-body text-sm leading-relaxed">
-										{item}
-									</p>
-								</li>
-							))}
-						</ul>
-					</div>
-
-					<div className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm h-full relative overflow-hidden">
-						<div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-bl-full -z-10" />
-
-						<div className="flex items-center gap-3 mb-6">
-							<div className="p-3 bg-bg-cream rounded-xl border border-gray-100">
-								<Globe className="w-6 h-6 text-accent" />
-							</div>
-							<h2 className="text-xl font-bold text-primary">
-								Publication <span className="text-accent-contrast">with</span> APC
-							</h2>
-						</div>
-
-						<p className="text-sm text-text-muted mb-6">
-							High Quality selected papers will be sent for publication in ESCI
-							& Scopus indexed Journal(s). Articles submitted to journals may go
-							through a secondary peer review per journal requirements.{" "}
-							<strong className="text-primary">
-								Acceptance is solely at the discretion of the Journal editors.
-							</strong>
-						</p>
-
-						<div className="space-y-4">
-							{publicationsWithAPC.map((journal, idx) => (
-								<div
-									key={idx}
-									className="p-4 rounded-lg bg-bg-cream/50 border border-gray-100/50 hover:bg-bg-cream transition-colors"
-								>
-									<h3 className="font-semibold text-primary text-sm mb-2">
-										{journal.title}
-									</h3>
-									<div className="flex flex-wrap gap-2">
-										<span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-accent/10 text-accent-contrast">
-											{journal.indexing}
-										</span>
-										<span
-											className={`inline-flex items-center px-2 py-1 rounded text-xs font-medium ${
-												journal.status === "Approved" ?
-													"bg-green-100 text-green-700"
-												:	"bg-yellow-100 text-yellow-700"
-											}`}
-										>
-											{journal.status}
-										</span>
-									</div>
-								</div>
-							))}
-						</div>
-					</div>
-				</div>
-				*/}
 			</div>
 		</div>
 	);
