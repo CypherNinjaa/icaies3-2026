@@ -9,7 +9,7 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 export const metadata: Metadata = {
 	title: "Call for Papers",
 	description:
-		"Submit your research papers to ICAIES³ 2026 across 8 tracks spanning intelligent systems, secure computing, scalable architectures, networking, IoT, data-centric AI, emerging technologies, and applied AI case studies.",
+		"Submit your research papers to ICAIES³ 2027 across 8 tracks spanning intelligent systems, secure computing, scalable architectures, networking, IoT, data-centric AI, emerging technologies, and applied AI case studies.",
 };
 
 const iconMap: Record<string, React.ReactNode> = {

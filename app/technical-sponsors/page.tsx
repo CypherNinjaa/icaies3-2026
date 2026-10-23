@@ -7,7 +7,7 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: "Technical Sponsors",
-  description: "Technical sponsors and partners of ICAIES³ 2026.",
+  description: "Technical sponsors and partners of ICAIES³ 2027.",
   robots: {
     index: false,
     follow: true,
@@ -27,7 +27,7 @@ export default function TechnicalSponsorsPage() {
           </div>
           <h3 className="text-2xl font-serif font-bold text-primary mb-3">Sponsorship Opportunities</h3>
           <p className="text-text-body leading-relaxed">
-            We are actively seeking technical sponsors and industry partners for ICAIES³ 2026. If you are interested in sponsoring or partnering with us, please reach out to the organizing committee.
+            We are actively seeking technical sponsors and industry partners for ICAIES³ 2027. If you are interested in sponsoring or partnering with us, please reach out to the organizing committee.
           </p>
           <div className="mt-8 inline-flex items-center gap-2 bg-bg-cream rounded-full px-5 py-2.5 text-sm text-primary font-medium">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />

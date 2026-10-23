@@ -7,7 +7,7 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 export const metadata: Metadata = {
   title: "Keynote Speakers",
   description:
-    "Keynote speakers for ICAIES³ 2026 — to be announced soon.",
+    "Keynote speakers for ICAIES³ 2027 — to be announced soon.",
   robots: {
     index: false,
     follow: true,
@@ -23,7 +23,7 @@ export default function KeynoteSpeakersPage() {
         <PageTitle
           lightText="Keynote"
           accentText="Speakers"
-          description="Distinguished experts from academia and industry will share their insights at ICAIES³ 2026."
+          description="Distinguished experts from academia and industry will share their insights at ICAIES³ 2027."
         />
 
         {/* Coming Soon State */}
@@ -37,7 +37,7 @@ export default function KeynoteSpeakersPage() {
           <p className="text-text-body leading-relaxed">
             Our keynote speakers will be announced shortly. Stay tuned for
             updates on the distinguished experts who will be sharing their
-            insights at ICAIES³ 2026.
+            insights at ICAIES³ 2027.
           </p>
           <div className="mt-8 inline-flex items-center gap-2 bg-bg-cream rounded-full px-5 py-2.5 text-sm text-primary font-medium">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />

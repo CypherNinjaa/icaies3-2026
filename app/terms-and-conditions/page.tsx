@@ -6,7 +6,7 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 export const metadata: Metadata = {
 	title: "Terms and Conditions",
 	description:
-		"Terms and Conditions for ICAIES³ 2026. Review rules for manuscript submission, registration, and attendance.",
+		"Terms and Conditions for ICAIES³ 2027. Review rules for manuscript submission, registration, and attendance.",
 	robots: { index: true, follow: true },
 };
 
@@ -19,11 +19,11 @@ export default function TermsConditionsPage() {
 				<PageTitle
 					lightText="Terms &amp;"
 					accentText="Conditions"
-					description="Last updated: June 17, 2026"
+					description="Last updated: October 23, 2026"
 				/>
 				<div className="max-w-4xl prose text-text-body space-y-6 mt-6">
 					<p>
-						Welcome to the ICAIES³ 2026 conference website. By accessing or
+						Welcome to the ICAIES³ 2027 conference website. By accessing or
 						using this website, you agree to comply with and be bound by the
 						following Terms and Conditions.
 					</p>
@@ -48,7 +48,7 @@ export default function TermsConditionsPage() {
 						3. Presentation Policy
 					</h2>
 					<p>
-						ICAIES³ 2026 is conducted in hybrid mode. Authors can present their
+						ICAIES³ 2027 is conducted in hybrid mode. Authors can present their
 						papers offline at Amity University Patna or online via our virtual
 						platform. Failure to present an accepted paper will result in
 						exclusion from the publication.

@@ -216,7 +216,7 @@ export const technicalCommittee = {
 export const internationalCommittee = {
   title: "International Advisory Committee",
   description:
-    "Our distinguished International Advisory Committee brings together leading global experts to guide the strategic academic direction of ICAIES³ 2026.",
+    "Our distinguished International Advisory Committee brings together leading global experts to guide the strategic academic direction of ICAIES³ 2027.",
   members: [
     // { name: "Prof. Liliana Guran", affiliation: "Babeș-Bolyai University, Romania" },
     { name: "Dr. Prabha Sana", affiliation: "Infineon Technology, Germany" },

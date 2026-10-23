@@ -8,7 +8,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
 	title: "Publication Opportunities",
 	description:
-		"Explore the publication opportunities for accepted papers at ICAIES³ 2026, including conference proceedings with ISBN and DOI, Scopus indexed edited books, and ESCI/Scopus indexed journals.",
+		"Explore the publication opportunities for accepted papers at ICAIES³ 2027, including conference proceedings with ISBN and DOI, Scopus indexed edited books, and ESCI/Scopus indexed journals.",
 };
 
 const publicationsWithoutAPC = [
@@ -32,7 +32,7 @@ export default function PublicationPartnerPage() {
 				<PageTitle
 					lightText="Publication"
 					accentText="Opportunities"
-					description="Explore the official publication avenues available for accepted and presented papers at ICAIES³ 2026."
+					description="Explore the official publication avenues available for accepted and presented papers at ICAIES³ 2027."
 				/>
 
 				{/* Two-column Publication Structure */}

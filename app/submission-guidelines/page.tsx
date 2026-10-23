@@ -14,7 +14,7 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 export const metadata: Metadata = {
 	title: "Paper Submission | Submission Guidelines",
 	description:
-		"Guidelines for Paper Submission, Plagiarism Policy, and Use of Generative AI and AI-Assisted Technologies in Scientific Writing for ICAIES³ 2026.",
+		"Guidelines for Paper Submission, Plagiarism Policy, and Use of Generative AI and AI-Assisted Technologies in Scientific Writing for ICAIES³ 2027.",
 };
 
 export default function SubmissionGuidelinesPage() {

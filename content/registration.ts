@@ -10,7 +10,7 @@ export interface RegistrationFeeSchedule {
 export const registrationFeeSchedules: RegistrationFeeSchedule[] = [
 	{
 		phase: "Registration Fee (Early Bird)",
-		timeline: "Till 20th Nov. 2026",
+		timeline: "Till 20th Dec. 2026",
 		students: "₹500",
 		researchScholar: "₹750",
 		faculties: "₹1,000",
@@ -18,7 +18,7 @@ export const registrationFeeSchedules: RegistrationFeeSchedule[] = [
 	},
 	{
 		phase: "Registration Fee (After Early Bird)",
-		timeline: "After 20th Nov. 2026",
+		timeline: "After 20th Dec. 2026",
 		students: "₹600",
 		researchScholar: "₹850",
 		faculties: "₹1,200",
@@ -37,6 +37,7 @@ export const posterFeeSchedule: RegistrationFeeSchedule = {
 
 export const registrationContent = {
 	title: "Registration",
+	paymentLink: "https://amity.edu/EventsPg/Patna/ICAIES2026",
 	overview:
 		"All the accepted paper(s) need to be registered by at least one of the author(s) to make a presentation at the conference. The paper without registration will not appear in the publication.",
 	registrationNotes: {
@@ -51,10 +52,11 @@ export const registrationContent = {
 	paymentInstructions: {
 		title: "Payment Instructions",
 		methods: [
+			"Online registration payment can be completed via the official Amity Events payment portal link.",
 			"Fee transfer through NEFT/RTGS into Amity University accounts (account details provided on request).",
 			"Valid proof of UG/PG/Research Scholar status must be submitted to confirm registration category.",
-			"Early Bird registration deadline: Till 20th Nov. 2026.",
-			"Final registration & camera-ready submission deadline: 30th Nov. 2026.",
+			"Early Bird registration deadline: Till 20th Dec. 2026.",
+			"Final registration & camera-ready submission deadline: 30th Dec. 2026.",
 		],
 	},
 };

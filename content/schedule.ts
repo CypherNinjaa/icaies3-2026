@@ -16,7 +16,7 @@ export interface ScheduleDay {
 
 export const programSchedule: ScheduleDay[] = [
 	{
-		date: "December 03, 2026",
+		date: "January 06, 2027",
 		dayLabel: "Day 1",
 		events: [
 			{
@@ -104,7 +104,7 @@ export const programSchedule: ScheduleDay[] = [
 		],
 	},
 	{
-		date: "December 04, 2026",
+		date: "January 07, 2027",
 		dayLabel: "Day 2",
 		events: [
 			{

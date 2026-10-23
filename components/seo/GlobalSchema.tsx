@@ -31,8 +31,8 @@ export function GlobalSchema() {
 		"@type": "EducationEvent",
 		"@id": "https://www.amitypatnaevents.in/#event",
 		name: `${siteMeta.title} — ${siteMeta.fullTitle}`,
-		startDate: "2026-12-03T09:00:00+05:30",
-		endDate: "2026-12-04T18:00:00+05:30",
+		startDate: "2027-01-06T09:00:00+05:30",
+		endDate: "2027-01-07T18:00:00+05:30",
 		eventAttendanceMode: "https://schema.org/MixedEventAttendanceMode",
 		eventStatus: "https://schema.org/EventScheduled",
 		location: [
@@ -70,7 +70,7 @@ export function GlobalSchema() {
 			priceCurrency: "INR",
 			price: "300",
 			availability: "https://schema.org/InStock",
-			validFrom: "2026-09-15T00:00:00+05:30",
+			validFrom: "2026-10-15T00:00:00+05:30",
 		},
 	};
 

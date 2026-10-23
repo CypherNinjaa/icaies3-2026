@@ -1,7 +1,7 @@
 export interface ContactPerson {
 	name: string;
 	role: string;
-	phone: string;
+	email: string;
 	affiliation: string;
 }
 
@@ -12,19 +12,20 @@ export const contactInfo = {
 		line2: "Amity University Patna",
 		line3: "Bailey Road, Patna, Bihar, India",
 		pincode: "801503",
-		landmark: "Transit Campuses (Old and New) — 15 mins drive from Patna Airport, 25 mins from Patna Railway Station",
+		landmark:
+			"Transit Campuses (Old and New) — 15 mins drive from Patna Airport, 25 mins from Patna Railway Station",
 	},
 	contactPersons: [
 		{
 			name: "Dr. Arvind Kumar Mishra",
 			role: "Convenor",
-			phone: "7906770253",
+			email: "akmishra@ptn.amity.edu",
 			affiliation: "Associate Professor, AIIT, Amity University Patna",
 		},
 		{
 			name: "Dr. Upasana",
 			role: "Convenor",
-			phone: "9451961800",
+			email: "usingh@ptn.amity.edu",
 			affiliation: "Assistant Professor, AIIT, Amity University Patna",
 		},
 	] as ContactPerson[],

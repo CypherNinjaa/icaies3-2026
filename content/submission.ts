@@ -12,7 +12,7 @@ export const submissionContent = {
 		item2:
 			"All submissions must be made electronically through the Submission Management System. The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.",
 		item3Prefix: "All manuscripts submitted to ",
-		item3Bold: "ICAIES3 2026",
+		item3Bold: "ICAIES³ 2027",
 		item3Suffix:
 			" undergo a double-blind peer-review process, reviewed by at least three reviewers. The review process for all submitted papers will be managed centrally by the scientific committee and external reviewers.",
 		item4:

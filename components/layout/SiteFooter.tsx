@@ -67,9 +67,22 @@ export function SiteFooter() {
 						<h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
 							Contact Us
 						</h3>
-						<p className="text-sm text-gray-400 leading-relaxed mb-4">
+						<p className="text-sm text-gray-400 leading-relaxed mb-3">
 							For any queries, please contact the organizing committee:
 						</p>
+						<ul className="space-y-2 mb-4 text-sm text-gray-300">
+							{contactInfo.contactPersons.map((person, idx) => (
+								<li key={idx} className="flex flex-wrap items-center gap-x-1.5">
+									<span className="font-medium text-white">{person.name}:</span>
+									<a
+										href={`mailto:${person.email}`}
+										className="text-gray-400 hover:text-accent transition-colors underline underline-offset-2 break-all"
+									>
+										{person.email}
+									</a>
+								</li>
+							))}
+						</ul>
 						<div className="flex items-start gap-2 text-sm text-gray-400">
 							<Mail className="w-3.5 h-3.5 text-accent shrink-0 mt-1" />
 							<div className="flex flex-wrap items-center gap-x-1">

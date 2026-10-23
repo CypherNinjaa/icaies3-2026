@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { PageTitle } from "@/components/layout/PageTitle";
 import { contactInfo } from "@/content/contact";
-import { MapPin, Mail, ExternalLink, Phone, Navigation } from "lucide-react";
+import { MapPin, Mail, ExternalLink, Navigation, Users } from "lucide-react";
 import Link from "next/link";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
@@ -10,7 +10,7 @@ import { ContactPageSchema } from "@/components/seo/ContactPageSchema";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact the ICAIES³ 2026 organizing committee. Address, phone, and email information for conference convenors.",
+    "Contact the ICAIES³ 2027 organizing committee. Address and email information for conference convenors.",
 };
 
 const MAPS_EMBED_URL =
@@ -28,7 +28,7 @@ export default function ContactPage() {
         <PageTitle
           lightText=""
           accentText="Contact"
-          description="Get in touch with the ICAIES³ 2026 organizing committee for paper submissions, registrations, or general inquiries."
+          description="Get in touch with the ICAIES³ 2027 organizing committee for paper submissions, registrations, or general inquiries."
         />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8">
           {/* Contact Info */}
@@ -37,11 +37,11 @@ export default function ContactPage() {
             <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-4">
                 <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-accent/10 text-accent">
-                  <Phone className="w-5 h-5" />
+                  <Users className="w-5 h-5" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-primary">Convenors &amp; Organizing Contacts</h3>
-                  <p className="text-xs text-text-muted">Direct contact for conference and poster queries</p>
+                  <p className="text-xs text-text-muted">Direct email contact for conference and poster queries</p>
                 </div>
               </div>
 
@@ -52,11 +52,11 @@ export default function ContactPage() {
                     <p className="text-xs text-text-muted mt-0.5">{person.affiliation}</p>
                     <p className="text-xs font-semibold text-accent-contrast mt-1">{person.role}</p>
                     <a
-                      href={`tel:${person.phone}`}
-                      className="inline-flex items-center gap-2 mt-3 font-mono text-sm font-bold text-primary hover:text-accent transition-colors"
+                      href={`mailto:${person.email}`}
+                      className="inline-flex items-center gap-2 mt-3 text-sm font-semibold text-primary hover:text-accent transition-colors break-all underline underline-offset-2"
                     >
-                      <Phone className="w-3.5 h-3.5 text-accent" />
-                      {person.phone}
+                      <Mail className="w-3.5 h-3.5 text-accent shrink-0" />
+                      {person.email}
                     </a>
                   </div>
                 ))}

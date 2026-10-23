@@ -8,7 +8,7 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 export const metadata: Metadata = {
 	title: "International Advisory Committee",
 	description:
-		"Meet the International Advisory Committee of ICAIES³ 2026, featuring leading global researchers, professors, and industry experts.",
+		"Meet the International Advisory Committee of ICAIES³ 2027, featuring leading global researchers, professors, and industry experts.",
 	alternates: {
 		canonical: "/committee/international",
 	},

@@ -2,15 +2,19 @@ export function ContactPageSchema() {
 	const schema = {
 		"@context": "https://schema.org",
 		"@type": "ContactPage",
-		name: "Contact ICAIES³ 2026 Committee",
+		name: "Contact ICAIES³ 2027 Committee",
 		description:
-			"Contact the ICAIES³ 2026 organizing committee. Address, phone, and email information.",
+			"Contact the ICAIES³ 2027 organizing committee. Address and email information.",
 		url: "https://www.amitypatnaevents.in/contact",
 		mainEntity: {
 			"@type": "EducationalOrganization",
 			name: "Amity University Patna",
-			telephone: "+91-9430800553",
-			email: "conference.aiit@ptn.amity.edu",
+			email: [
+				"akmishra@ptn.amity.edu",
+				"usingh@ptn.amity.edu",
+				"conference.aiit@ptn.amity.edu",
+				"aiit@ptn.amity.edu",
+			],
 		},
 	};
 

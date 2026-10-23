@@ -7,8 +7,8 @@ export const homeContent = {
 	welcome: {
 		title: "Welcome to ICAIES³",
 		body: [
-			"The <strong>International Conference on Advances in AI-Enabled Intelligent, Secure and Scalable Systems (ICAIES&sup3; 2026)</strong> is a flagship international forum that aims to bring together researchers, industry professionals, practitioners, and thought leaders from academia and industry to share cutting-edge research, innovations, and applications in the rapidly evolving domains of artificial intelligence, intelligent systems, cybersecurity, and scalable computing architectures.",
-			"As digital ecosystems become more complex, the demand for systems that are intelligent, secure, dependable, and scalable is rapidly increasing. <strong>ICAIES&sup3; 2026</strong> provides a platform to explore and address the theoretical, technical, and practical challenges in designing and deploying next-generation intelligent systems powered by AI and underpinned by secure and scalable infrastructures.",
+			"The <strong>International Conference on Advances in AI-Enabled Intelligent, Secure and Scalable Systems (ICAIES&sup3; 2027)</strong> is a flagship international forum that aims to bring together researchers, industry professionals, practitioners, and thought leaders from academia and industry to share cutting-edge research, innovations, and applications in the rapidly evolving domains of artificial intelligence, intelligent systems, cybersecurity, and scalable computing architectures.",
+			"As digital ecosystems become more complex, the demand for systems that are intelligent, secure, dependable, and scalable is rapidly increasing. <strong>ICAIES&sup3; 2027</strong> provides a platform to explore and address the theoretical, technical, and practical challenges in designing and deploying next-generation intelligent systems powered by AI and underpinned by secure and scalable infrastructures.",
 		],
 	},
 
@@ -41,7 +41,7 @@ export const homeContent = {
 	conferenceGoal: {
 		title: "Conference Aims",
 		body: [
-			"ICAIES³ 2026 is a flagship international forum designed to bring together researchers, industry professionals, practitioners, and thought leaders from academia and industry to exchange cutting-edge research, innovations, and applications.",
+			"ICAIES³ 2027 is a flagship international forum designed to bring together researchers, industry professionals, practitioners, and thought leaders from academia and industry to exchange cutting-edge research, innovations, and applications.",
 			"The conference focuses on addressing the theoretical, technical, and practical challenges of designing and deploying next-generation systems that are intelligent, secure, dependable, and scalable across evolving digital ecosystems.",
 		],
 	},

@@ -8,7 +8,7 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 export const metadata: Metadata = {
   title: "National Advisory Committee",
   description:
-    "Meet the National Advisory Committee of ICAIES³ 2026 ensuring the highest quality of peer review and academic rigor.",
+    "Meet the National Advisory Committee of ICAIES³ 2027 ensuring the highest quality of peer review and academic rigor.",
 };
 
 export default function NationalAdvisoryCommitteePage() {

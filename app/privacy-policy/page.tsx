@@ -6,7 +6,7 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 export const metadata: Metadata = {
 	title: "Privacy Policy",
 	description:
-		"Privacy Policy for ICAIES³ 2026. Learn how we handle your manuscript data and registration details.",
+		"Privacy Policy for ICAIES³ 2027. Learn how we handle your manuscript data and registration details.",
 	robots: { index: true, follow: true },
 };
 
@@ -19,11 +19,11 @@ export default function PrivacyPolicyPage() {
 				<PageTitle
 					lightText=""
 					accentText="Privacy Policy"
-					description="Last updated: June 17, 2026"
+					description="Last updated: October 23, 2026"
 				/>
 				<div className="max-w-4xl prose text-text-body space-y-6 mt-6">
 					<p>
-						Amity University Patna and the organizing committee of ICAIES³ 2026
+						Amity University Patna and the organizing committee of ICAIES³ 2027
 						are committed to protecting your privacy. This Privacy Policy
 						explains how we collect, use, and safeguard the personal information
 						and manuscript data you provide to us.

@@ -5,15 +5,19 @@ import {
 	registrationFeeSchedules,
 	posterFeeSchedule,
 } from "@/content/registration";
-import { CreditCard, CheckCircle, Presentation, Mail, Phone } from "lucide-react";
+import {
+	CreditCard,
+	CheckCircle,
+	Presentation,
+	ExternalLink,
+} from "lucide-react";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
-import { contactInfo } from "@/content/contact";
 
 export const metadata: Metadata = {
 	title: "Registration",
 	description:
-		"Register for ICAIES³ 2026. View registration fee structure for Research Articles and Poster Presentations, eligibility guidelines, and payment instructions.",
+		"Register for ICAIES³ 2027. View registration fee structure for Research Articles and Poster Presentations, eligibility guidelines, and payment instructions.",
 };
 
 export default function RegistrationPage() {
@@ -110,6 +114,22 @@ export default function RegistrationPage() {
 							</div>
 						))}
 					</div>
+
+					{/* Conference Registration Fees Payment Link */}
+					<div className="mt-6 bg-bg-cream rounded-xl p-5 border border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+						<p className="text-sm font-bold text-primary">
+							Conference Registration Fees:
+						</p>
+						<a
+							href={registrationContent.paymentLink}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="btn-gradient text-sm justify-center shrink-0"
+						>
+							<span>Pay Registration Fee</span>
+							<ExternalLink className="w-4 h-4 shrink-0" />
+						</a>
+					</div>
 				</section>
 
 				{/* Poster Presentation Fee Schedule */}
@@ -161,6 +181,22 @@ export default function RegistrationPage() {
 							</tbody>
 						</table>
 					</div>
+
+					{/* Poster Presentation Registration Fees Payment Link */}
+					<div className="mt-6 bg-bg-cream rounded-xl p-5 border border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+						<p className="text-sm font-bold text-primary">
+							Poster Presentation Registration Fees:
+						</p>
+						<a
+							href={registrationContent.paymentLink}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="btn-gradient text-sm justify-center shrink-0"
+						>
+							<span>Pay Poster Registration Fee</span>
+							<ExternalLink className="w-4 h-4 shrink-0" />
+						</a>
+					</div>
 				</section>
 
 				{/* Payment Instructions */}
@@ -181,44 +217,6 @@ export default function RegistrationPage() {
 						)}
 					</ul>
 				</section>
-
-				{/* Account Details & Contact Banner */}
-				{/* <section id="registration-assistance" className="mt-12">
-					<div className="bg-linear-to-br from-primary to-primary-light rounded-xl p-8 text-white">
-						<h3 className="font-serif text-2xl font-bold mb-3 text-accent-light">
-							Account Details &amp; Registration Assistance
-						</h3>
-						<p className="text-white/90 text-sm mb-6 max-w-2xl leading-relaxed">
-							The fee is transferable into our accounts through NEFT/RTGS. The details of the account will be provided on request. Please contact the organizing committee for bank transfer details or registration inquiries:
-						</p>
-						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
-							<div className="bg-white/10 rounded-lg p-3.5 border border-white/20">
-								<p className="font-semibold text-accent">Dr. Arvind Kumar Mishra</p>
-								<p className="text-white/80 text-xs mt-0.5">Convenor, AIIT, Amity University Patna</p>
-								<a href="tel:7906770253" className="inline-flex items-center gap-1.5 mt-2 font-mono text-white hover:text-accent transition-colors">
-									<Phone className="w-3.5 h-3.5 text-accent" />
-									7906770253
-								</a>
-							</div>
-							<div className="bg-white/10 rounded-lg p-3.5 border border-white/20">
-								<p className="font-semibold text-accent">Dr. Upasana</p>
-								<p className="text-white/80 text-xs mt-0.5">Convenor, AIIT, Amity University Patna</p>
-								<a href="tel:9451961800" className="inline-flex items-center gap-1.5 mt-2 font-mono text-white hover:text-accent transition-colors">
-									<Phone className="w-3.5 h-3.5 text-accent" />
-									9451961800
-								</a>
-							</div>
-							<div className="bg-white/10 rounded-lg p-3.5 border border-white/20">
-								<p className="font-semibold text-accent">Official Email</p>
-								<p className="text-white/80 text-xs mt-0.5">Conference Secretariat</p>
-								<a href={`mailto:${contactInfo.email}`} className="inline-flex items-center gap-1.5 mt-2 text-white hover:text-accent transition-colors underline underline-offset-2">
-									<Mail className="w-3.5 h-3.5 text-accent" />
-									{contactInfo.email}
-								</a>
-							</div>
-						</div>
-					</div>
-				</section> */}
 			</div>
 		</div>
 	);

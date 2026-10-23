@@ -7,7 +7,7 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: "Organizing Committee",
-  description: "Meet the organizing committee of ICAIES³ 2026.",
+  description: "Meet the organizing committee of ICAIES³ 2027.",
 };
 
 const roleIcons: Record<string, React.ReactNode> = {
@@ -34,7 +34,7 @@ export default function OrganizingCommitteePage() {
       <SiteHeader />
       <BreadcrumbSchema pageName="Organizing Committee" route="/committee/organizing" />
       <div className="mx-auto max-w-[1280px] px-6 lg:px-12 pb-10 lg:pb-14 pt-4 lg:pt-6">
-        <PageTitle lightText="Organizing" accentText="Committee" description="Meet the distinguished members of the ICAIES³ 2026 Organizing Committee." />
+        <PageTitle lightText="Organizing" accentText="Committee" description="Meet the distinguished members of the ICAIES³ 2027 Organizing Committee." />
         <div className="space-y-10 mt-8">
           {groupedMembers.map(({ role, label, members }) => members.length > 0 && (
             <section key={role} id={`committee-${role}`}>
